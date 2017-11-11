@@ -24,9 +24,72 @@
           
         <h1 class="visually-hidden">Выбор гостиницы</h1>
           
-        <section class="search-modal">
+        <section class="modal-filter">
             <h2 class="visually-hidden">Поиск гостиницы</h2>
-            <!--Здесь будет форма-->
+            <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+                <fieldset>
+                    <legend>Инфраструктура:</legend>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="pool" checked>
+                            Бассейн
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="parking">
+                            Парковка
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="wi-fi">
+                            Wi-fi
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Тип жилья:</legend>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="hotel" checked>
+                            Бассейн
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="motel" checked>
+                            Парковка
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="appartaments" checked>
+                            Wi-fi
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Стоимость в сутки (Р):</legend>
+                    <div class="price">
+                        <p>
+                            <label for="price-from">От</label>
+                            <input type="text" name="from" id="price-from" value="0">
+                        </p>
+                        <p>
+                            <label for="price-to">До</label>
+                            <input type="text" name="to" id="price-to" value="3000">
+                        </p>
+                    <div class="price-slider" tabindex="0">
+                        <span class="slider-icon visually-hidden">Первый ползунок</span>
+                    </div>
+                    <div class="price-slider" tabindex="0">
+                        <span class="slider-icon visually-hidden">Второй ползунок</span>
+                    </div>
+                    </div>
+                </fieldset>
+                <button type="submit">Показать</button>
+            </form>
         </section>
            
         <section class="results">
@@ -108,7 +171,7 @@
           </div>
           <p class="footer-copyright">
               Website by
-              <a class="htmlacademy" href="#"><img class="htmlacademy-logo" src="ing/htmlacademy-logo.svg" width="116" height="41" alt="HTML Academy"></a>
+              <a class="htmlacademy" href="#"><img class="htmlacademy-logo" src="img/htmlacademy-logo.svg" width="116" height="41" alt="HTML Academy"></a>
           </p>
       </footer>
     </body>
