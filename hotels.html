@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
       
@@ -15,7 +18,7 @@
                 <li><a class="navigation-button" href="info.html">Информация</a></li>
                 <li><a class="navigation-button" href="media.html">Фото и видео</a></li>
                 <li><a class="navigation-button" href="map.html">Карта штата</a></li>
-                <li><a class="navigation-button" href="hotels.html">Гостиницы</a></li>
+                <li class="active-main"><a class="navigation-button" href="hotels.html">Гостиницы</a></li>
             </ul>
         </nav>
     </header>
@@ -95,21 +98,21 @@
         <section class="results">
             <h2 class="visually-hidden">Результаты</h2>
             <div class="sorting"> 
-                <b>Найдено: 3</b>
+                <p class="found">Найдено: 3</p>
                 <p>Сортировка:</p>
                 <ul class="sorting-settings">
-                    <li><a class="price" href="#">По цене</a></li>
+                    <li class="active-sort"><a class="price" href="#">По цене</a></li>
                     <li><a class="type" href="#">По типу</a></li>
                     <li><a class="rating" href="#">По рейтингу</a></li>
-                    <li><a class="from-top" href="#"><img src="img/up.png" width="12" height="10" alt="С лучших результатов"></a></li>
-                    <li><a class="from-bottom" href="#"><img src="img/down.png" width="12" height="10" alt="С худших результатов"></a></li>
+                    <li><a class="from-top" href="#"><img src="img/icon-up.svg" width="12" height="10" alt="С лучших результатов"></a></li>
+                    <li><a class="from-bottom" href="#"><img src="img/icon-down.svg" width="12" height="10" alt="С худших результатов"></a></li>
                 </ul>
             </div>
             <div class="results-list">
                 <ul class="hotels-list">
                     <li>
                         <img class="hotel-preview" src="img/amara.jpg" width="135" height="90" alt="Отель Amara Resort & Spa">
-                        <p class="hotel-name">Amara Resort & Spa</p>
+                        <p><a class="hotel-name" href="#">Amara Resort & Spa</a></p>
                         <p class="hotel-type">Гостиница</p>
                         <p class="hotel-price">От 4000 Р.</p>
                         <p class="hotel-rating">Рейтинг: 8,5</p>
@@ -125,7 +128,7 @@
                     </li>
                     <li>
                         <img class="hotel-preview" src="img/desert.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
-                        <p class="hotel-name">Desert Quail Inn</p>
+                        <p><a class="hotel-name" href="#">Desert Quail Inn</a></p>
                         <p class="hotel-type">Мотель</p>
                         <p class="hotel-price">От 3000 Р.</p>
                         <p class="hotel-rating">Рейтинг: 8,9</p>
@@ -141,7 +144,7 @@
                     </li>
                     <li>
                         <img class="hotel-preview" src="img/villas.jpg" width="135" height="90" alt="Апартаменты Villas At Poco Diablo">
-                        <p class="hotel-name">Villas At Poco Diablo</p>
+                        <p><a class="hotel-name" href="#">Villas At Poco Diablo</a></p>
                         <p class="hotel-type">Апартаменты</p>
                         <p class="hotel-price">От 2000 Р.</p>
                         <p class="hotel-rating">Рейтинг: 9,2</p>
@@ -161,18 +164,22 @@
     </main>
       
       <footer class="main-footer">
-          <p class="tag">#visitsedona</p>
-          <div class="footer-social">
-              <ul class="social-list">
-                  <li><a class="social-tw" href="#">Твиттер</a></li>
-                  <li><a class="social-fb" href="#">Фейсбук</a></li>
-                  <li><a class="social-yt" href="#">Ютуб</a></li>
-              </ul>
-          </div>
-          <p class="footer-copyright">
-              Website by
-              <a class="htmlacademy" href="#"><img class="htmlacademy-logo" src="img/htmlacademy-logo.svg" width="116" height="41" alt="HTML Academy"></a>
-          </p>
-      </footer>
+        <div class="footer-tag-container">
+            <p class="tag">#visitsedona</p>
+        </div>
+        <div class="footer-social-container">
+            <ul class="social-list">
+                <li><a class="social-tw" href="#">Твиттер</a></li>
+                <li><a class="social-fb" href="#">Фейсбук</a></li>
+                <li><a class="social-yt" href="#">Ютуб</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright-container">
+            <p class="footer-copyright">
+                Website by
+                <a class="htmlacademy" href="#"><img class="htmlacademy-logo" src="img/htmlacademy-logo.svg" width="116" height="41" alt="HTML Academy"></a>
+            </p>
+        </div>
+    </footer>
     </body>
 </html>
