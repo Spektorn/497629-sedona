@@ -18,10 +18,11 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     
-    min-width: 768px;
+    /*Временно*/
+    width: 768px;
     
     font-family: 'PT Sans', 'Tahoma', sans-serif;
     font-size: 14px;
@@ -31,6 +32,9 @@ body {
     text-transform: uppercase;
     
     background-color: #ffffff;
+    background-image: url(../img/sedona-index-768.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 a {
@@ -42,12 +46,17 @@ a {
 /*Главное меню*/
 
 .main-navigation {
-    color: #000000;
+    margin: 0;
+    padding: 0;
     
-    background-color: #ffffff;
+    color: #000000;
 }
 
 .list-navigation {
+    margin: 0;
+    padding: 0;
+
+    background-color: #ffffff;
     list-style: none;
 }
 
@@ -82,6 +91,7 @@ a {
     padding: 0;
     
     width: 100%;
+    /*Временно*/
     height: 512px;
     
     background-color: #858c92;
@@ -89,8 +99,8 @@ a {
         url("../img/shadow.png"),  
         url("../img/background-photo.jpg");
     background-size: 
-        768px 37px,
-        contain;
+        100%,
+        100%;
     background-position: 
         bottom center,
         center;
@@ -123,6 +133,9 @@ a {
 }
 
 .features-list {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
@@ -133,6 +146,7 @@ a {
 }
 
 .feature-item {
+    margin: 0;
     padding: 46px;
     
     width: 33%;
@@ -164,10 +178,16 @@ a {
 }
 
 .towns-advantages-list {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
 .advantage-item {
+    margin: 0;
+    padding: 0;
+    
     width: 33%;
     height: 330px;
 }
@@ -592,4 +612,103 @@ a {
     
     width: 18px;
     height: 17px;
+}
+
+/*Сеточные стили*/
+*,
+*::before,
+*::after {
+    background-color: transparent;
+}
+
+/*Хедер*/
+
+.main-header {
+    margin: 0;
+    padding: 0;
+    
+    /*Временно для сетки*/
+    min-height: 56px;
+    outline: 2px solid blue;
+}
+
+.sedona-main-logo {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.main-navigation {
+    margin: 0;
+    padding: 0;
+    
+    /*Временно для сетки*/
+    min-height: 56px;
+    outline: 2px solid yellow;
+}
+
+.main-navigation .align-container {
+    position: relative;
+    
+    display: flex;
+    width: 88%;
+    margin: 0 auto;
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
+}
+
+.list-navigation {
+    margin: 0 auto;
+    padding: 0;
+    
+    /*Временно для сетки*/
+    min-height: 56px;
+    min-width: 676px;
+    outline: 2px solid green;
+}
+
+/*Интро главной страницы*/
+
+.background-container {
+    width: 100%;
+    min-height: 512px;
+}
+
+.align-container {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.background-container .align-container {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-wrapper {
+    margin-bottom: 53px;
+}
+
+.sedona-wrapper {
+    margin-bottom: 58px;
+}
+
+.grandcanyon-wrapper {
+    margin-bottom: 85px;
+}
+
+/*Преимущества*/
+.features-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.towns-advantages-wrapper {
+    display: flex;
+    flex-direction: row;
 }
