@@ -21,7 +21,7 @@ body {
     margin: 0 auto;
     padding: 0;
     
-    /*Временно*/
+    /*Временно для сетки*/
     width: 768px;
     
     font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -32,9 +32,12 @@ body {
     text-transform: uppercase;
     
     background-color: #ffffff;
+    /*Временно для сетки*/
+/*
     background-image: url(../img/sedona-index-768.jpg);
     background-repeat: no-repeat;
     background-position: center top;
+*/
 }
 
 a {
@@ -91,8 +94,6 @@ a {
     padding: 0;
     
     width: 100%;
-    /*Временно*/
-    height: 512px;
     
     background-color: #858c92;
     background-image: 
@@ -108,19 +109,17 @@ a {
 }
 
 .text-container {
-    margin: auto;
+    margin: 0;
     padding: 0;
     
+    width: 100%;
+}
+
+.text-container .paragraph {
     text-align: center;
 }
 
-.slogan-container {
-    margin: auto;
-    padding: 0;
-    
-    width: 440px;
-    height: 48px;
-    
+.text-container .slogan {
     font-size: 21px;
     font-weight: bold;
     color: #000000;
@@ -615,10 +614,19 @@ a {
 }
 
 /*Сеточные стили*/
+/*ДОБАВИТЬ FLEX-BASIS*/
 *,
 *::before,
 *::after {
     background-color: transparent;
+}
+
+.align-container {
+    width: 88%;
+    margin: 0 auto;
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
 }
 
 /*Хедер*/
@@ -635,7 +643,8 @@ a {
 .sedona-main-logo {
     position: absolute;
     top: 0;
-    left: 40%;
+    left: 50%;
+    margin-left: -68px;
     
     /*Временно для сетки*/
     outline: 2px solid yellow;
@@ -654,8 +663,6 @@ a {
     position: relative;
     
     display: flex;
-    width: 88%;
-    margin: 0 auto;
     
     /*Временно для сетки*/
     outline: 2px solid red;
@@ -674,32 +681,46 @@ a {
 /*Интро главной страницы*/
 
 .background-container {
-    width: 100%;
-    min-height: 512px;
+    /*Временно для сетки*/
+    outline: 2px solid blue;
 }
 
-.align-container {
-    width: 88%;
-    margin: 0 auto;
-}
-
-.background-container .align-container {
-    padding-top: 75px;
+.introduction .align-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 75px;
+    padding-bottom: 85px;
+    min-height: 512px;
 }
 
-.welcome-wrapper {
-    margin-bottom: 53px;
+.intro-wrapper {
+    margin: 0;
+    padding: 0;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
 }
 
-.sedona-wrapper {
-    margin-bottom: 58px;
+.text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    /*Временно для сетки*/
+    outline: 2px solid blue;
 }
 
-.grandcanyon-wrapper {
-    margin-bottom: 85px;
+.text-container .paragraph {
+    flex-basis: 490px;
+    margin: 0;
+    padding: 0;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
 }
 
 /*Преимущества*/
