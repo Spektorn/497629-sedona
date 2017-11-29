@@ -128,6 +128,8 @@ a {
 /*Преимущества главной страницы*/
 
 .features {
+    line-height: 21px;
+    
     background-color: #eeeeee;
 }
 
@@ -146,7 +148,6 @@ a {
 
 .feature-item {
     margin: 0;
-    padding: 46px;
     
     width: 33%;
     
@@ -191,9 +192,10 @@ a {
     height: 330px;
 }
 
-.advantage-item-container::before {
+.towns-advantages .feature-container::before {
     content: "";
     display: block;
+    margin: auto;
     
     width: 75px;
     height: 72px;
@@ -201,15 +203,15 @@ a {
     background-size: 75px 72px;
 }
 
-.advantage-item-container-1::before {
+.feature-container-1::before {
     background-image: url(../img/icon-1.svg);
 }
 
-.advantage-item-container-2::before {
+.feature-container-2::before {
     background-image: url(../img/icon-2.svg);
 }
 
-.advantage-item-container-3::before {
+.feature-container-3::before {
     background-image: url(../img/icon-3.svg);
 }
 
@@ -727,9 +729,82 @@ a {
 .features-wrapper {
     display: flex;
     flex-direction: column;
+    
+     /*Временно для сетки*/
+    outline: 2px solid yellow;
 }
 
 .towns-advantages-wrapper {
     display: flex;
     flex-direction: row;
+    
+     /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.usual-features-wrapper {
+    display: flex;
+    flex-direction: row;
+    
+     /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.feature-item {
+    flex-basis: 256px;
+    
+    vertical-align: middle;
+    
+     /*Временно для сетки*/
+    outline: 2px solid blue;
+}
+
+.usual-features-wrapper {
+    flex-basis: 256px;
+    
+     /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.special {
+    position: relative;
+    
+     /*Временно для сетки*/
+    outline: 2px solid blue;
+}
+
+.special-1 {
+    padding-right: 67%;
+}
+
+.special-2 {
+    padding-left: 67%;
+}
+
+.special img {
+    position: absolute;
+    top: 0;
+    
+     /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.special-1 img {
+    right: 0;
+}
+
+.special-2 img {
+    left: 0;
+}
+
+.features .feature-container {
+    width: 180px;
+    margin: auto;
+    margin-top: 52px;
+    margin-bottom: 40px;
+    
+    text-align: center;
+    
+     /*Временно для сетки*/
+    outline: 2px solid yellow;
 }
