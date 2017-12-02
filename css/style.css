@@ -32,12 +32,6 @@ body {
     text-transform: uppercase;
     
     background-color: #ffffff;
-    /*Временно для сетки*/
-/*
-    background-image: url(../img/sedona-index-768.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
-*/
 }
 
 a {
@@ -115,11 +109,11 @@ a {
     width: 100%;
 }
 
-.text-container .paragraph {
+.intro-text-container .paragraph {
     text-align: center;
 }
 
-.text-container .slogan {
+.intro-text-container .slogan {
     font-size: 21px;
     font-weight: bold;
     color: #000000;
@@ -228,10 +222,6 @@ a {
     color: #000000;
 }
 
-.choice .text-container {
-    width: 434px;
-}
-
 /*Интерактивные элементы*/
 
 .choice button[type="button"] {
@@ -274,6 +264,9 @@ a {
 }
 
 .social-list {
+    padding: 0;
+    margin: 0;
+    
     list-style: none;
 }
 
@@ -432,6 +425,8 @@ a {
 }
 
 .filter fieldset {
+    margin: 0;
+    padding: 0;
     border: none;
 }
 
@@ -530,6 +525,9 @@ a {
 }
 
 .hotels-list {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
@@ -616,11 +614,9 @@ a {
 }
 
 /*Сеточные стили*/
-/*ДОБАВИТЬ FLEX-BASIS*/
-*,
-*::before,
-*::after {
-    background-color: transparent;
+
+section {
+    outline: 2px solid red;
 }
 
 .align-container {
@@ -664,8 +660,6 @@ a {
 .main-navigation .align-container {
     position: relative;
     
-    display: flex;
-    
     /*Временно для сетки*/
     outline: 2px solid red;
 }
@@ -705,20 +699,15 @@ a {
     outline: 2px solid yellow;
 }
 
-.text-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    
-    /*Временно для сетки*/
-    outline: 2px solid blue;
+.introduction .intro-text-container {
+    width: 100%;
+    padding-top: 55px;
+    padding-bottom: 50px;
 }
 
-.text-container .paragraph {
-    flex-basis: 490px;
-    margin: 0;
+.introduction .paragraph {
+    width: 490px;
+    margin: 0 auto;
     padding: 0;
     
     /*Временно для сетки*/
@@ -726,6 +715,7 @@ a {
 }
 
 /*Преимущества*/
+
 .features-wrapper {
     display: flex;
     flex-direction: column;
@@ -745,6 +735,7 @@ a {
 .usual-features-wrapper {
     display: flex;
     flex-direction: row;
+    flex-basis: 256px;
     
      /*Временно для сетки*/
     outline: 2px solid yellow;
@@ -757,13 +748,6 @@ a {
     
      /*Временно для сетки*/
     outline: 2px solid blue;
-}
-
-.usual-features-wrapper {
-    flex-basis: 256px;
-    
-     /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .special {
@@ -797,14 +781,184 @@ a {
     left: 0;
 }
 
-.features .feature-container {
+.feature-container {
     width: 180px;
     margin: auto;
-    margin-top: 52px;
-    margin-bottom: 40px;
+    margin-top: 47px;
+    margin-bottom: 37px;
     
     text-align: center;
     
      /*Временно для сетки*/
     outline: 2px solid yellow;
+}
+
+.towns-advantages .feature-container {
+    margin-top: 60px;
+    margin-bottom: 62px;
+}
+
+/*Подбор отеля и карта*/
+
+.choice .choice-text-container {
+    width: 100%;
+    padding-top: 55px;
+    padding-bottom: 50px;
+}
+
+.choice .paragraph {
+    width: 434px;
+    margin: 0 auto;
+    padding: 0;
+    
+     /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.choice .choice-container {
+    text-align: center;
+}
+
+/*Футер*/
+
+.mapnfooter-wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 768px;
+    height: 595px;
+    
+    background-color: #e0e7ce;
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
+}
+
+.main-footer {
+    width: 100%;
+    min-height: 121px;
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
+}
+
+.mapnfooter-wrapper .main-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.main-footer .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+    /*Временно для сетки*/
+    outline: 2px solid blue;
+}
+
+.main-footer .footer-wrapper {
+    flex-basis: 33%;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.main-footer .footer-tag-container {
+    width: 136px;
+    margin: auto;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.main-footer .footer-copyright-container {
+    width: 150px;
+    margin: auto;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+.main-footer .footer-social-container {
+    width: 195px;
+    margin: auto;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+/*Страница отелей*/
+/*Форма подбора отеля*/
+
+.modal-filter {
+    width: 100%;
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
+    min-height: 217px;
+}
+
+.modal-filter .filter-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 100%;
+}
+
+.modal-filter .fieldset-wrapper {
+    flex-basis: 200px;
+    padding: 32px 42px;
+    
+    /*Временно для сетки*/
+    outline: 2px solid yellow;
+}
+
+
+.filter-wrapper div:nth-child(3) {
+    flex-basis: 250px;
+}
+
+
+/*Сортировка и список отелей*/
+
+.results {
+    display: flex;
+    flex-direction: column;
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
+}
+
+.results .sorting {
+    flex-basis: 175px;
+    
+    /*Временно для сетки*/
+    outline: 2px solid blue;
+}
+
+.results .results-list {
+    flex-basis: 455px;
+    
+    /*Временно для сетки*/
+    outline: 2px solid blue;
+}
+
+.results .hotels-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    /*Временно для сетки*/
+    outline: 2px solid blue;
+}
+
+.hotels-list-wrapper .hotel-position {
+    flex-basis: 152px;
+    
+    /*Временно для сетки*/
+    outline: 2px solid blue;
 }
