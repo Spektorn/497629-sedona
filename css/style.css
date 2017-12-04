@@ -154,7 +154,6 @@ a {
     background-color: #81b3d2;
 }
 
-
 .special h3 {
     color: #ffffff;
 }
@@ -762,11 +761,11 @@ section {
 }
 
 .usual-features-list {
-    margin: 0;
-    padding: 0;
-    
     display: flex;
     flex-direction: row;
+    
+    margin: 0;
+    padding: 0;
     
     list-style: none;
     
@@ -776,8 +775,6 @@ section {
 
 .features-list li {
     min-height: 256px;
-    
-    vertical-align: middle;
     
      /*Временно для сетки*/
     outline: 2px solid blue;
@@ -792,16 +789,17 @@ section {
 }
 
 .special-1 {
-    padding-right: 67%;
+    padding-right: 66.66%;
 }
 
 .special-2 {
-    padding-left: 67%;
+    padding-left: 66.66%;
 }
 
 .special img {
     position: absolute;
-    top: 0;
+    
+    width: 66.66%;
     
      /*Временно для сетки*/
     outline: 2px solid yellow;
@@ -821,6 +819,7 @@ section {
     width: 300px;
     margin: auto;
     margin-top: 45px;
+    margin-bottom: 58px;
     
     text-align: center;
     vertical-align: middle;
