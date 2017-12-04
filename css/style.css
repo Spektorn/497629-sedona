@@ -511,6 +511,7 @@ a {
 
 .active-sort a {
     color: #81b3d2;
+    text-decoration: none;
 }
 
 /*Список отелей*/
@@ -1030,7 +1031,6 @@ section {
     padding-left: 10px;
 }
 
-
 /*Сортировка и список отелей*/
 
 .results {
@@ -1046,46 +1046,55 @@ section {
 .results .sorting {
     margin: 0;
     padding: 0;
-    min-height: 86px;
     
     /*Временно для сетки*/
+    min-height: 86px;
     outline: 2px solid blue;
-}
-
-.sorting p {
-    margin: 0;
-    padding: 0;
 }
 
 .sorting .align-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 28px 0;
     
+    /*Временно для сетки*/
     min-height: 86px;
-}
-
-.sorting .h-sorting {
-    margin-right: 40px;
-}
-
-.sorting .found {
-    margin-right: 40px;
-    width: 120px;
 }
 
 .sorting .sorting-settings {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 374px;
-    padding: 0 10px;
+    
+    min-width: 900px;
 }
 
-.sorting-settings li:nth-last-of-type(2) {
-    margin-left: auto;
+.sorting-settings .text-selectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin: 0;
+    padding: 0 10px;
+    min-width: 375px;
+    
+    list-style: none;
 }
+
+.sorting-settings .arrow-selectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin: 0;
+    padding: 0;
+    min-width: 35px;
+    
+    list-style: none;
+}
+
+/*Результаты*/ 
 
 .results .results-list {
     flex-basis: 455px;
@@ -1126,7 +1135,8 @@ section {
     margin-left: auto;
     padding: 0;
 }
-
+ 
+/*Временно*/
 .hotel-main-info p:first-of-type {
     margin: 0;
     padding: 0;
