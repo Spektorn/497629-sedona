@@ -987,30 +987,47 @@ section {
     
     /*Временно для сетки*/
     outline: 2px solid red;
-    min-height: 217px;
+    height: 217px;
 }
 
-.modal-filter .filter-wrapper {
+.modal-filter .filter {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.filter .filter-wrapper {
     display: flex;
     flex-direction: row;
+    align-items: center;
     
     width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    /*Временно для сетки*/
+    height: 217px;
 }
 
-.modal-filter .fieldset-wrapper {
-    flex-basis: 241px;
-    padding-top: 31px;
+.filter .fieldset-wrapper {
+    width: 20%;
+    padding-top: 28px;
     padding-bottom: 31px;
     padding-left: 0;
     
     /*Временно для сетки*/
+    height: 217px;
     outline: 2px solid yellow;
 }
 
+.filter-wrapper div:nth-child(2) {
+    margin-right: auto;
+    padding-left: 15px;
+}
 
 .filter-wrapper div:nth-child(3) {
-    flex-basis: 350px;
-    margin-left: auto;
+    width: 300px;
+    padding-left: 10px;
 }
 
 
