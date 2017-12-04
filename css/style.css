@@ -612,10 +612,6 @@ a {
 
 /*Сеточные стили*/
 
-section {
-    outline: 2px solid red;
-}
-
 .container {
     margin: 0 auto;
     max-width: 1200px;
@@ -624,9 +620,6 @@ section {
 .align-container {
     margin: 0 auto;
     width: 88%;
-    
-    /*Временно для сетки*/
-    outline: 2px solid red;
 }
 
 /*Хедер*/
@@ -638,7 +631,6 @@ section {
     
     /*Временно для сетки*/
     height: 56px;
-    outline: 2px solid blue;
 }
 
 .sedona-main-logo {
@@ -646,9 +638,6 @@ section {
     top: 0;
     left: 50%;
     margin-left: -68px;
-    
-    /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .main-navigation {
@@ -657,7 +646,6 @@ section {
     
     /*Временно для сетки*/
     height: 56px;
-    outline: 2px solid yellow;
 }
 
 .main-navigation .align-container {
@@ -670,19 +658,12 @@ section {
     align-items: center;
     margin: 0;
     padding: 0;
-    
-    /*Временно для сетки*/
-    height: 56px;
-    outline: 2px solid green;
 }
 
 .list-navigation li {
     width: 20%;
     padding-top: 16px;
     padding-bottom: 16px;
-    
-    /*Временно для сетки*/
-    outline: 2px solid green;
 }
 
 .list-navigation li:nth-of-type(2) {
@@ -702,11 +683,6 @@ section {
 
 /*Интро главной страницы*/
 
-.introduction .background-container {
-    /*Временно для сетки*/
-    outline: 2px solid blue;
-}
-
 .introduction .promo-container {
     display: flex;
     flex-direction: column;
@@ -715,17 +691,11 @@ section {
     padding-top: 72px;
     padding-bottom: 74px;
     min-height: 510px;
-    
-    /*Временно для сетки*/
-    outline: 2px solid red;
 }
 
 .intro-wrapper {
     margin: 0;
     padding: 0;
-    
-    /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .introduction .intro-text-container {
@@ -738,9 +708,6 @@ section {
     width: 490px;
     margin: 0 auto;
     padding: 0;
-    
-    /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 /*Преимущества*/
@@ -748,17 +715,11 @@ section {
 .features-list {
     display: flex;
     flex-direction: column;
-    
-     /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .towns-advantages-list {
     display: flex;
     flex-direction: row;
-    
-     /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .usual-features-list {
@@ -769,24 +730,15 @@ section {
     padding: 0;
     
     list-style: none;
-    
-     /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .features-list li {
     min-height: 256px;
-    
-     /*Временно для сетки*/
-    outline: 2px solid blue;
 }
 
 .special {
     position: relative;
     overflow: hidden;
-    
-     /*Временно для сетки*/
-    outline: 2px solid blue;
 }
 
 .special-1 {
@@ -801,9 +753,6 @@ section {
     position: absolute;
     
     width: 66.66%;
-    
-     /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .special-1 img {
@@ -824,9 +773,6 @@ section {
     
     text-align: center;
     vertical-align: middle;
-    
-     /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .towns-advantages .feature-container {
@@ -841,9 +787,6 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
-    
-    /*Временно для сетки*/
-    outline: 2px solid red;
 }
 
 .choice-wrapper .choice {
@@ -866,9 +809,6 @@ section {
     width: 450px;
     margin: 0 auto;
     padding: 0;
-    
-     /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 /*Форма поиска отеля*/
@@ -910,7 +850,6 @@ section {
     
     /*Временно для сетки*/
     height: 595px;
-    outline: 2px solid red;
 }
 
 .map-container {
@@ -926,7 +865,6 @@ section {
     
     /*Временно для сетки*/
     min-height: 121px;
-    outline: 2px solid red;
 }
 
 .mapnfooter-wrapper .main-footer {
@@ -944,40 +882,25 @@ section {
     justify-content: space-between;
     
     width: 100%;
-    
-    /*Временно для сетки*/
-    outline: 2px solid blue;
 }
 
 .main-footer .footer-wrapper {
     flex-basis: 33%;
-    
-    /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .main-footer .footer-tag-container {
     width: 136px;
     margin: auto;
-    
-    /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .main-footer .footer-copyright-container {
     width: 150px;
     margin: auto;
-    
-    /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 .main-footer .footer-social-container {
     width: 195px;
     margin: auto;
-    
-    /*Временно для сетки*/
-    outline: 2px solid yellow;
 }
 
 /*Страница отелей*/
@@ -1018,7 +941,6 @@ section {
     
     /*Временно для сетки*/
     height: 217px;
-    outline: 2px solid yellow;
 }
 
 .filter-wrapper div:nth-child(2) {
@@ -1038,9 +960,6 @@ section {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    
-    /*Временно для сетки*/
-    outline: 2px solid red;
 }
 
 .results .sorting {
@@ -1049,7 +968,6 @@ section {
     
     /*Временно для сетки*/
     min-height: 86px;
-    outline: 2px solid blue;
 }
 
 .sorting .align-container {
@@ -1098,17 +1016,11 @@ section {
 
 .results .results-list {
     flex-basis: 455px;
-    
-    /*Временно для сетки*/
-    outline: 2px solid blue;
 }
 
 .results .hotels-list {
     display: flex;
     flex-direction: column;
-    
-    /*Временно для сетки*/
-    outline: 2px solid blue;
 }
 
 .hotels-list .hotel-position {
@@ -1117,9 +1029,6 @@ section {
     flex-basis: 152px;
     padding-top: 31px;
     padding-bottom: 31px;
-    
-    /*Временно для сетки*/
-    outline: 2px solid blue;
 }
 
 .hotel-position img {
