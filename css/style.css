@@ -21,9 +21,6 @@ body {
     margin: 0 auto;
     padding: 0;
     
-    /*Временно для сетки*/
-    width: 768px;
-    
     font-family: 'PT Sans', 'Tahoma', sans-serif;
     font-size: 14px;
     line-height: 26px;
@@ -60,6 +57,7 @@ a {
 /*Интерактивные элементы*/
 
 .list-navigation a {
+    font-weight: bold;
     color: #000000;
 }
 
@@ -94,11 +92,11 @@ a {
         url("../img/shadow.png"),  
         url("../img/background-photo.jpg");
     background-size: 
-        100%,
+        100% 57px,
         100%;
     background-position: 
         bottom center,
-        center;
+        0 -60px;
     background-repeat: no-repeat;
 }
 
@@ -143,7 +141,7 @@ a {
 .feature-item {
     margin: 0;
     
-    width: 33%;
+    width: 33.33%;
     
     text-align: center;
 }
@@ -182,8 +180,7 @@ a {
     margin: 0;
     padding: 0;
     
-    width: 33%;
-    height: 330px;
+    width: 33.33%;
 }
 
 .towns-advantages .feature-container::before {
@@ -421,7 +418,7 @@ a {
     background-image: url(../img/filter-background.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 100%;
 }
 
 .filter fieldset {
@@ -493,6 +490,8 @@ a {
 }
 
 .sorting-settings {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -518,7 +517,6 @@ a {
 /*Список отелей*/
 
 .results-list {
-    font: inherit;
     line-height: 21px;
     
     background-color: #ffffff;
@@ -532,7 +530,6 @@ a {
 }
 
 .hotel-name {
-    font: inherit;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
@@ -619,9 +616,14 @@ section {
     outline: 2px solid red;
 }
 
-.align-container {
-    width: 88%;
+.container {
     margin: 0 auto;
+    max-width: 1200px;
+}
+
+.align-container {
+    margin: 0 auto;
+    width: 88%;
     
     /*Временно для сетки*/
     outline: 2px solid red;
@@ -630,11 +632,12 @@ section {
 /*Хедер*/
 
 .main-header {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 1200px;
     
     /*Временно для сетки*/
-    min-height: 56px;
+    height: 56px;
     outline: 2px solid blue;
 }
 
@@ -653,42 +656,68 @@ section {
     padding: 0;
     
     /*Временно для сетки*/
-    min-height: 56px;
+    height: 56px;
     outline: 2px solid yellow;
 }
 
 .main-navigation .align-container {
     position: relative;
-    
-    /*Временно для сетки*/
-    outline: 2px solid red;
 }
 
 .list-navigation {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
     padding: 0;
     
     /*Временно для сетки*/
-    min-height: 56px;
-    min-width: 676px;
+    height: 56px;
     outline: 2px solid green;
 }
 
+.list-navigation li {
+    width: 20%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+    /*Временно для сетки*/
+    outline: 2px solid green;
+}
+
+.list-navigation li:nth-of-type(2) {
+    margin-right: 20%;
+}
+
+.list-navigation li:first-of-type,
+.list-navigation li:nth-of-type(2) {
+    text-align: left;
+}
+
+.list-navigation li:last-of-type,
+.list-navigation li:nth-of-type(3) {
+    text-align: right;
+}
+
+
 /*Интро главной страницы*/
 
-.background-container {
+.introduction .background-container {
     /*Временно для сетки*/
     outline: 2px solid blue;
 }
 
-.introduction .align-container {
+.introduction .promo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 75px;
-    padding-bottom: 85px;
-    min-height: 512px;
+    padding-top: 72px;
+    padding-bottom: 74px;
+    min-height: 510px;
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
 }
 
 .intro-wrapper {
@@ -716,7 +745,7 @@ section {
 
 /*Преимущества*/
 
-.features-wrapper {
+.features-list {
     display: flex;
     flex-direction: column;
     
@@ -724,7 +753,7 @@ section {
     outline: 2px solid yellow;
 }
 
-.towns-advantages-wrapper {
+.towns-advantages-list {
     display: flex;
     flex-direction: row;
     
@@ -732,17 +761,21 @@ section {
     outline: 2px solid yellow;
 }
 
-.usual-features-wrapper {
+.usual-features-list {
+    margin: 0;
+    padding: 0;
+    
     display: flex;
     flex-direction: row;
-    flex-basis: 256px;
+    
+    list-style: none;
     
      /*Временно для сетки*/
     outline: 2px solid yellow;
 }
 
-.feature-item {
-    flex-basis: 256px;
+.features-list li {
+    min-height: 256px;
     
     vertical-align: middle;
     
@@ -752,6 +785,7 @@ section {
 
 .special {
     position: relative;
+    overflow: hidden;
     
      /*Временно для сетки*/
     outline: 2px solid blue;
@@ -774,20 +808,22 @@ section {
 }
 
 .special-1 img {
+    top: -81px;
     right: 0;
 }
 
 .special-2 img {
+    top: -74px;
     left: 0;
 }
 
 .feature-container {
-    width: 180px;
+    width: 300px;
     margin: auto;
-    margin-top: 47px;
-    margin-bottom: 37px;
+    margin-top: 45px;
     
     text-align: center;
+    vertical-align: middle;
     
      /*Временно для сетки*/
     outline: 2px solid yellow;
@@ -795,10 +831,50 @@ section {
 
 .towns-advantages .feature-container {
     margin-top: 60px;
-    margin-bottom: 62px;
+    margin-bottom: 82px;
 }
 
 /*Подбор отеля и карта*/
+
+.choice-wrapper {
+    position: relative;
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    
+    /*Временно для сетки*/
+    outline: 2px solid red;
+}
+
+.choice-wrapper .choice {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.choice-wrapper .modal-search {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    z-index: 1;
+    
+    width: 568px;
+    margin-left: -284px;
+    padding: 0;
+}
+
+.modal-search .search {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-search .search-content-wrapper {
+    width: 100%;
+    min-height: 396px;
+    margin: 0;
+    padding: 56px;
+}
 
 .choice .choice-text-container {
     width: 100%;
@@ -807,7 +883,7 @@ section {
 }
 
 .choice .paragraph {
-    width: 434px;
+    width: 450px;
     margin: 0 auto;
     padding: 0;
     
@@ -819,14 +895,16 @@ section {
     text-align: center;
 }
 
+
 /*Футер*/
 
 .mapnfooter-wrapper {
     position: relative;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 768px;
+    max-width: 1200px;
     height: 595px;
+    overflow: hidden;
     
     background-color: #e0e7ce;
     
@@ -834,9 +912,15 @@ section {
     outline: 2px solid red;
 }
 
+.map-container {
+    margin-top: -155px;
+    margin-left: -259px;
+}
+
 .main-footer {
-    width: 100%;
+    max-width: 1200px;
     min-height: 121px;
+    margin: 0 auto;
     
     background-color: rgba(255, 255, 255, 0.9);
     
@@ -848,6 +932,8 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
+    margin: 0;
 }
 
 .main-footer .footer-container {
@@ -905,14 +991,15 @@ section {
 .modal-filter .filter-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     
     width: 100%;
 }
 
 .modal-filter .fieldset-wrapper {
-    flex-basis: 200px;
-    padding: 32px 42px;
+    flex-basis: 241px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 0;
     
     /*Временно для сетки*/
     outline: 2px solid yellow;
@@ -920,7 +1007,8 @@ section {
 
 
 .filter-wrapper div:nth-child(3) {
-    flex-basis: 250px;
+    flex-basis: 350px;
+    margin-left: auto;
 }
 
 
@@ -929,16 +1017,55 @@ section {
 .results {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
     
     /*Временно для сетки*/
     outline: 2px solid red;
 }
 
 .results .sorting {
-    flex-basis: 175px;
+    margin: 0;
+    padding: 0;
+    min-height: 86px;
     
     /*Временно для сетки*/
     outline: 2px solid blue;
+}
+
+.sorting p {
+    margin: 0;
+    padding: 0;
+}
+
+.sorting .align-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 28px 0;
+    
+    min-height: 86px;
+}
+
+.sorting .h-sorting {
+    margin-right: 40px;
+}
+
+.sorting .found {
+    margin-right: 40px;
+    width: 120px;
+}
+
+.sorting .sorting-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 374px;
+    padding: 0 10px;
+}
+
+.sorting-settings li:nth-last-of-type(2) {
+    margin-left: auto;
 }
 
 .results .results-list {
@@ -948,7 +1075,7 @@ section {
     outline: 2px solid blue;
 }
 
-.results .hotels-list-wrapper {
+.results .hotels-list {
     display: flex;
     flex-direction: column;
     
@@ -956,9 +1083,32 @@ section {
     outline: 2px solid blue;
 }
 
-.hotels-list-wrapper .hotel-position {
+.hotels-list .hotel-position {
+    display: flex;
+    flex-direction: row;
     flex-basis: 152px;
+    padding-top: 31px;
+    padding-bottom: 31px;
     
     /*Временно для сетки*/
     outline: 2px solid blue;
+}
+
+.hotel-position img {
+    margin-right: 30px;
+}
+
+.hotel-position .hotel-main-info {
+    margin: 0;
+    padding: 0;
+}
+
+.hotel-position .hotel-main-mark {
+    margin-left: auto;
+    padding: 0;
+}
+
+.hotel-main-info p:first-of-type {
+    margin: 0;
+    padding: 0;
 }

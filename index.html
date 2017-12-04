@@ -31,7 +31,7 @@
           
         <section class="introduction">
             <div class="background-container">
-                <div class="align-container">
+                <div class="promo-container">
                     <div class="intro-wrapper">
                         <img src="img/welcome.png" width="256" height="86" alt="Welcome to the gorgeous">
                     </div>
@@ -55,48 +55,50 @@
         <section class="features">
            <!-- <h2 class="visually-hidden">Преимущества Седоны</h2> -->
             <ol class="features-list">
-                <div class="features-wrapper">
-                    <li class="feature-item special special-1">
-                        <div class="feature-container">
-                            <h3>Настоящий городок</h3>
-                            <img class="sedona-town" src="img/sedona-town.jpg" width="511" height="256" alt="Город Седона">
-                            <p class="feature-number">№1</p>
-                            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+                <li class="feature-item special special-1">
+                    <div class="feature-container">
+                        <h3>Настоящий городок</h3>
+                        <div class="feature-image">
+                            <img class="sedona-town" src="img/sedona-town.jpg" width="800" height="401" alt="Город Седона">
                         </div>
-                    </li>
-                    <li class="towns-advantages">
-                        <ul class="towns-advantages-list">
-                            <div class="towns-advantages-wrapper">
-                                <li class="advantage-item">
-                                    <div class="feature-container feature-container-1">
-                                        <h3>Жилье</h3>
-                                        <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-                                    </div>
-                                </li>
-                                <li class="advantage-item">
-                                    <div class="feature-container feature-container-2">
-                                        <h3>Еда</h3>
-                                        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                                    </div>
-                                </li>
-                                <li class="advantage-item">
-                                    <div class="feature-container feature-container-3">
-                                        <h3>Сувениры</h3>
-                                        <p>Не только китайского, но и местного производства!</p>
-                                    </div>
-                                </li>
+                        <p class="feature-number">№1</p>
+                        <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+                    </div>
+                </li>
+                <li class="towns-advantages">
+                    <ul class="towns-advantages-list">
+                        <li class="advantage-item">
+                            <div class="feature-container feature-container-1">
+                                <h3>Жилье</h3>
+                                <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                             </div>
-                        </ul>
-                    </li>
-                    <li class="feature-item special special-2">
-                        <div class="feature-container">
-                            <h3>Там есть мост Дъявола</h3>
-                            <img class="devils-bridge" src="img/devils-bridge.jpg" width="511" height="256" alt="Мост Дъявола">
-                            <p class="feature-number">№2</p>
-                            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                        </li>
+                        <li class="advantage-item">
+                            <div class="feature-container feature-container-2">
+                                <h3>Еда</h3>
+                                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                            </div>
+                        </li>
+                        <li class="advantage-item">
+                            <div class="feature-container feature-container-3">
+                                <h3>Сувениры</h3>
+                                <p>Не только китайского, но и местного производства!</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="feature-item special special-2">
+                    <div class="feature-container">
+                        <h3>Там есть мост Дъявола</h3>
+                        <div class="feature-image">
+                            <img class="devils-bridge" src="img/devils-bridge.jpg" width="800" height="400" alt="Мост Дъявола">
                         </div>
-                    </li>
-                    <div class="usual-features-wrapper">
+                        <p class="feature-number">№2</p>
+                        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                    </div>
+                </li>
+                <li class="usual-features">
+                    <ul class="usual-features-list">
                         <li class="feature-item">
                             <div class="feature-container">
                                 <h3>Небольшая площадь</h3>
@@ -118,27 +120,60 @@
                                 <p>Большинство едет в Гранд Каньон и толпится там</p>
                             </div>
                         </li>
-                    </div>
-                </div>
+                    </ul>
+                </li>
             </ol>
         </section>
           
-        <section class="choice">
-<!--            <h2 class="visually-hidden">Выбор гостиницы</h2>-->
-            <div class="choice-container">
-                <div class="choice-text-container">
-                    <div class="paragraph">
-                        <p class="interest">Заинтересовались?</p>
-                        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <div class="choice-wrapper">
+            <section class="choice">
+<!--                <h2 class="visually-hidden">Выбор гостиницы</h2>-->
+                <div class="choice-container">
+                    <div class="choice-text-container">
+                        <div class="paragraph">
+                            <p class="interest">Заинтересовались?</p>
+                            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+                        </div>
                     </div>
+                    <button type="button">Поиск гостиницы в Седоне</button>
                 </div>
-                <button type="button">Поиск гостиницы в Седоне</button>
-            </div>
-        </section>
+            </section>
+            <section class="modal-search">  
+<!--                <h2 class="visually-hidden">Поиск гостиницы</h2>-->
+                <form class="search" method="post" action="https://echo.htmlacademy.ru">
+                    <div class="search-content-wrapper">
+                        <p>
+                            <label for="search-arrival-date">Дата заезда:</label>
+                            <input type="date" id="search-arrival-date" name="arrival-date" value="2017-04-24">
+                            <button type="button" class="calendar" aria-label="Выбор даты"></button>
+                        </p>
+                        <p>
+                            <label for="search-departure-date">Дата выезда:</label>
+                            <input type="date" id="search-departure-date" name="departure-date" value="2017-06-04">
+                            <button type="button" class="calendar" aria-label="Выбор даты"></button>
+                        </p>
+                        <p>
+                            <label for="search-adults">Взрослые:</label>
+                            <button type="button" class="minus minus-adults">-</button>
+                            <input type="number" id="search-adults" name="adults" min="0" value="2">
+                            <button type="button" class="plus plus-adults">+</button>
+
+                            <label for="search-children">Дети:</label>
+                            <button type="button" class="minus minus-children">-</button>
+                            <input type="number" id="search-children" name="children" min="0" value="0">
+                            <button type="button" class="plus plus-children">+</button>
+                        </p>
+                        <button type="submit">Найти</button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
             
-    <div class="mapnfooter-wrapper">
-<!--        <img class="map" src="img/map.png" width="1718" height="748" alt="Карта местности">-->
+    <div class="mapnfooter-wrapper container">
+        <div class="map-container">
+            <img class="map" src="img/map.png" width="1718" height="748" alt="Карта местности">
+        </div>
         <footer class="main-footer">
             <div class="footer-container">
                 <div class="footer-wrapper">
@@ -159,40 +194,12 @@
                     <div class="footer-copyright-container ">
                         <p class="footer-copyright">
                             Website by
-                            <a class="htmlacademy" href="#"><img class="htmlacademy-logo" src="img/htmlacademy-logo.svg" width="116" height="41" alt="HTML Academy"></a>
+                            <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss"><img class="htmlacademy-logo" src="img/htmlacademy-logo.svg" width="116" height="41" alt="HTML Academy"></a>
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-      
-    <section class="modal modal-seacrh">  
-        <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <form class="search" method="post" action="https://echo.htmlacademy.ru">
-            <p>
-                <label for="search-arrival-date">Дата заезда:</label>
-                <input type="date" id="search-arrival-date" name="arrival-date" value="2017-04-24">
-                <button type="button" class="calendar" aria-label="Выбор даты"></button>
-            </p>
-            <p>
-                <label for="search-departure-date">Дата выезда:</label>
-                <input type="date" id="search-departure-date" name="departure-date" value="2017-06-04">
-                <button type="button" class="calendar" aria-label="Выбор даты"></button>
-            </p>
-            <p>
-                <label for="search-adults">Взрослые:</label>
-                <button type="button" class="minus minus-adults">-</button>
-                <input type="number" id="search-adults" name="adults" min="0" value="2">
-                <button type="button" class="plus plus-adults">+</button>
-                
-                <label for="search-children">Дети:</label>
-                <button type="button" class="minus minus-children">-</button>
-                <input type="number" id="search-children" name="children" min="0" value="0">
-                <button type="button" class="plus plus-children">+</button>
-            </p>
-            <button type="submit">Найти</button>
-        </form>
-    </section>
   </body>
 </html>
