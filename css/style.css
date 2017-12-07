@@ -74,15 +74,15 @@ input[type="radio"].visually-hidden {
 
 /*Главное меню*/
 
+.main-header {
+    background-color: #ffffff;
+}
+
 .main-navigation {
     margin: 0 auto;
     padding: 0;
-    max-width: 1200px;
     
     color: #000000;
-    
-    /*Временно для сетки*/
-    height: 56px;
 }
 
 .sedona-main-logo {
@@ -99,9 +99,6 @@ input[type="radio"].visually-hidden {
     width: 100%;
     margin: 0;
     padding: 0;
-    
-    /*Временно для сетки*/
-    height: 56px;
 }
 
 .main-navigation .align-container {
@@ -111,9 +108,9 @@ input[type="radio"].visually-hidden {
 .list-navigation {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     
-    height: 56px;
     margin: 0;
     padding: 0;
 
@@ -123,9 +120,10 @@ input[type="radio"].visually-hidden {
 
 .list-navigation li {
     width: 20%;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 15px 0;
 }
+
+/*Переполнение?*/
 
 .list-navigation li:nth-of-type(2) {
     margin-right: auto;
@@ -204,19 +202,27 @@ input[type="radio"].visually-hidden {
 
 .introduction .intro-text-container {
     width: 100%;
-    padding-top: 55px;
-    padding-bottom: 50px;
+}
+
+.intro-text-container p {
+    margin: 0;
+    padding: 0;
 }
 
 .intro-text-container .paragraph {
     width: 490px;
-    margin: 0 auto;
+    margin-top: 55px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     
     text-align: center;
 }
 
 .intro-text-container .slogan {
+    margin-bottom: 22px;
+    
     font-size: 21px;
     font-weight: bold;
     color: #000000;
@@ -259,13 +265,18 @@ input[type="radio"].visually-hidden {
 }
 
 .feature-container {
-    width: 300px;
+    width: 250px;
     margin: auto;
     margin-top: 45px;
-    margin-bottom: 58px;
+    margin-bottom: 55px;
     
     text-align: center;
     vertical-align: middle;
+}
+
+.feature-container .feature-description {
+    margin: 0;
+    padding: 0;
 }
 
 .special {
@@ -328,15 +339,20 @@ input[type="radio"].visually-hidden {
 }
 
 .towns-advantages-list .feature-container {
+    position: relative;
+    
     margin-top: 60px;
     margin-bottom: 82px;
+    padding-top: 102px;
 }
 
 .towns-advantages-list .feature-container::before {
     content: "";
-    display: block;
-    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
     
+    margin-left: -37px;
     width: 75px;
     height: 72px;
         
@@ -566,13 +582,11 @@ input[type="radio"].visually-hidden {
     overflow: hidden;
     
     max-width: 1200px;
+    min-height: 595px;
     margin: 0 auto;
     padding: 0;
     
     background-color: #e0e7ce;
-    
-    /*Временно для сетки*/
-    height: 595px;
 }
 
 .map-container {
@@ -582,7 +596,7 @@ input[type="radio"].visually-hidden {
 
 .main-footer {
     max-width: 1200px;
-    min-height: 121px;
+
     margin: 0 auto;
     
     background-color: rgba(255, 255, 255, 0.9);
@@ -600,46 +614,98 @@ input[type="radio"].visually-hidden {
 .main-footer .footer-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     
     width: 100%;
+/*    margin: 37px 0;*/
 }
 
 .footer-container .footer-wrapper {
     flex-basis: 33%;
+    
+    margin: 0;
+    padding: 0;
 }
 
 .main-footer .footer-tag-container {
     width: 136px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 48px 0;
     
     font-size: 21px;
     font-weight: bold;
     color: #000000;
 }
 
+.footer-tag-container .tag {
+    margin: 0;
+    padding: 0;
+}
+
 .main-footer .footer-copyright-container {
-    width: 150px;
-    margin: auto;
+    position: relative;
+    
+    width: 200px;
+    margin: 0 auto;
+    padding: 37px 0;
+    
+    vertical-align: middle;
+}
+
+.footer-copyright-container span {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    
+    margin-top: -21px;
+}
+
+.footer-copyright-container .footer-copyright {
+    margin: 0;
+    padding: 15px 0;
+    
+    vertical-align: middle;
 }
 
 .main-footer .footer-social-container {
-    width: 195px;
-    margin: auto;
+    width: 150px;
+    margin: 0 auto;
+    padding: 37px 0;
 }
 
 .social-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    width: 150px;
     padding: 0;
     margin: 0;
     
     list-style: none;
 }
 
-/*Интерактивные элементы*/
-/*Сделать смену цвета свг картинок*/
-/*Картинки внутри ссылок появятся на следующем этапе*/
+.social-list li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 46px;
+    height: 48px;
+}
 
-.social-list a {
+/*Интерактивные элементы*/
+
+.social-list a { 
+    width: 46px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    
     background-color: #81b3d2;
 }
 
@@ -654,14 +720,19 @@ input[type="radio"].visually-hidden {
 
 .social-list a::before {
     content: "";
-    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     
-    width: 46px;
-    height: 48px;
+    width: 22px;
+    height: 22px;
+    margin-left: -11px;
+    margin-top: -11px;
     
-    background-size: 27px 27px;
+    background-size: 22px 22px;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 1;
 }
 
 .social-list .social-tw::before {
@@ -675,6 +746,33 @@ input[type="radio"].visually-hidden {
 .social-list .social-yt::before {
     background-image: url(../img/youtube-icon.svg);
 }
+
+.social-list a:hover::before,
+.social-list a:focus::before {
+    opacity: 1;
+}
+
+.social-list a:active::before {
+    opacity: 0.3;
+}
+
+.htmlacademy-link:hover path, 
+.htmlacademy-link:focus path {
+    fill: #81b3d2;
+} 
+
+.htmlacademy-link:hover rect, 
+.htmlacademy-link:focus rect {
+    fill: #81b3d2;
+} 
+
+.htmlacademy-link:active path {
+    fill: #bdbbbc;
+} 
+
+.htmlacademy-link:active rect {
+    fill: #bdbbbc;
+} 
 
 /*Фильтр страниц отелей*/
 /*Заменить у чекбоксов outline*/
@@ -780,9 +878,9 @@ input[type="radio"].visually-hidden {
 }
 
 .filter button[type="submit"]:active {
-    color: #000000;
+    color: rgba(0, 0, 0, 0.9);
     
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /*Сортировка*/
