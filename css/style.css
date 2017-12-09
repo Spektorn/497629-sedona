@@ -1,10 +1,3 @@
-/*размер шрифта,
-высоту строки,
-цвет шрифта,
-жирность шрифта,
-гарнитура (название шрифта),
-другие текстовые параметры, если требуется по макету.*/
-
 /*Базовые теги*/
 
 html { 
@@ -40,7 +33,7 @@ a {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -62,36 +55,22 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-/*
-.container,
-.main-header,
-.main-page-footer,
-.hotels-footer {
-    box-shadow: 0 0 100px 1px #000000;
-} 
-*/
-
-.align-container {
-    margin: 0 auto;
-    width: 88%;
-}
-
 /*Главное меню*/
 
 .main-header {
+    margin: 0;
+    padding: 0;
+    
+    color: #000000;
+    
     background-color: #ffffff;
 }
 
 .main-navigation {
-    margin: 0 auto;
-    padding: 0;
+    position: relative;
     
-    color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 .sedona-main-logo {
@@ -102,16 +81,6 @@ input[type="radio"].visually-hidden {
     width: 138px;
     height: 70px;
     margin-left: -68px;
-}
-
-.main-navigation {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navigation .align-container {
-    position: relative;
 }
 
 .list-navigation {
@@ -129,10 +98,12 @@ input[type="radio"].visually-hidden {
 
 .list-navigation li {
     width: 20%;
-    padding: 15px 0;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    vertical-align: middle;
 }
-
-/*Переполнение?*/
 
 .list-navigation li:nth-of-type(2) {
     margin-right: auto;
@@ -140,15 +111,19 @@ input[type="radio"].visually-hidden {
 
 .list-navigation li:first-of-type,
 .list-navigation li:nth-of-type(2) {
+    padding-left: 6%;
+    
     text-align: left;
 }
 
 .list-navigation li:last-of-type,
 .list-navigation li:nth-of-type(3) {
+    padding-right: 6%;
+    
     text-align: right;
 }
 
-/*Интерактивные элементы*/
+/*Интерактивные элементы хедера*/
 
 .list-navigation a {
     font-weight: bold;
@@ -173,17 +148,16 @@ input[type="radio"].visually-hidden {
 }
 
 /*Интро главной страницы*/
-/*Картинку-тень заменить на SVG*/
+/*Интро-картинки*/
 
 .introduction {
     background-color: #ffffff;
 }
 
 .introduction .background-container {
+    width: 100%;
     margin: 0;
     padding: 0;
-    
-    width: 100%;
     
     background-color: #858c92;
     background-image: 
@@ -194,7 +168,7 @@ input[type="radio"].visually-hidden {
         100%;
     background-position: 
         bottom center,
-        0 -60px;
+        0 -54px;
     background-repeat: no-repeat;
 }
 
@@ -203,9 +177,10 @@ input[type="radio"].visually-hidden {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 72px;
-    padding-bottom: 74px;
+    
     min-height: 510px;
+    padding-top: 78px;
+    padding-bottom: 80px;
 }
 
 .intro-wrapper {
@@ -213,10 +188,23 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-.introduction .intro-text-container {
+.intro-wrapper:first-of-type {
+    height: 86px;
+}
+
+.intro-wrapper:nth-of-type(2) {
+    height: 78px;
+}
+
+.intro-wrapper:last-of-type {
+    height: 80px;
+}
+
+/*Интро-текст*/ 
+
+.intro-text-container {
     width: 100%;
-    padding-top: 55px;
-    padding-bottom: 48px;
+    height: 218px;
 }
 
 .intro-text-container p {
@@ -226,15 +214,16 @@ input[type="radio"].visually-hidden {
 
 .intro-text-container .paragraph {
     width: 490px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 0;
+    padding-top: 60px;
+    padding-bottom: 50px;
     
     text-align: center;
 }
 
 .intro-text-container .slogan {
-    padding-bottom: 22px;
+    margin-bottom: 28px;
     
     font-size: 21px;
     font-weight: bold;
@@ -441,124 +430,6 @@ input[type="radio"].visually-hidden {
     color: #000000;
 }
 
-/*Форма подбора отеля*/
-
-.choice-wrapper .modal-search {
-    position: absolute;
-    top: 350px;
-    left: 50%;
-    z-index: 1;
-    
-    width: 568px;
-    margin-left: -284px;
-    padding: 0;
-}
-
-.modal-search .search {
-    margin: 0;
-    padding: 0;
-    
-    font-weight: bold;
-    color: #000000;
-    
-    background-color: #ffffff;
-}
-
-.modal-search .search-content-wrapper {
-    width: 100%;
-    min-height: 396px;
-    margin: 0;
-    padding: 56px;
-}
-
-.search input {
-    margin: 0;
-    padding: 10px;
-    
-    font: inherit;
-    
-    background-color: #f2f2f2;
-    border: none;
-    outline: none;
-}
-
-.search input[type="date"] {
-    width: 308px;
-    height: 38px;
-}
-
-.search input[type="number"] {
-    padding: 5px;
-    
-    width: 38px;
-    height: 38px;
-}
-
-.search input:hover {
-    background-color: #ebebeb;
-}
-
-.search input:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
-}
-
-.search button[type="button"] {
-    margin: 0;
-    padding: 5px;
-    
-    width: 38px;
-    height: 38px;
-    
-    font: inherit;
-    color: #a9a9a9;
-    
-    background-color: #f2f2f2;
-    border: none;
-    outline: none;
-}
-
-.search .calendar {
-    background-image: url(../img/calendar.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.search button[type="button"]:hover,
-.search button[type="button"]:focus {
-    color: #000000;
-}
-
-.search button[type="button"]:active {
-    color: #81b3d2;
-}
-
-.search button[type="submit"] {
-    width: 458px;
-    height: 58px;
-    
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    
-    background-color: #81b3d2;
-    border: none;
-    outline: none;
-}
-
-.search button[type="submit"]:hover,
-.search button[type="submit"]:focus {
-    background-color: #669ec0;
-}
-
-.search button[type="submit"]:active {
-    color: rgba(255, 255, 255, 0.3);
-    
-    background-color: #5496bd;
-}
-
 /*Интерактивные элементы*/
 
 .choice button[type="button"] {
@@ -586,6 +457,147 @@ input[type="radio"].visually-hidden {
     color: rgba(255, 255, 255, 0.3);
     
     background-color: #503e33;
+}
+
+/*Форма подбора отеля*/
+
+.choice-wrapper .search {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    z-index: 1;
+    
+    width: 568px;
+    margin-left: -284px;
+    padding: 56px;
+    
+    background-color: #ffffff;
+}
+
+.modal-search {
+    margin: 0;
+    padding: 0;
+    
+    font-weight: bold;
+    color: #000000;
+}
+
+.modal-search p {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.modal-search label {
+    margin: auto 0;
+}
+
+.modal-search input[type="date"],
+.modal-search input[type="number"] {
+    margin: 0;
+    
+    font: inherit;
+    
+    background-color: #f2f2f2;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+.modal-search input[type="date"]:hover,
+.modal-search input[type="number"]:hover {
+    background-color: #ebebeb;
+}
+
+.modal-search input[type="date"]:focus,
+.modal-search input[type="number"]:focus {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+}
+
+.modal-search input[type="date"] {
+    width: 345px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 13px;
+    padding-right: 39px;
+}
+
+.modal-search input[type="number"] {
+    padding: 6px 5px;
+    
+    width: 38px;
+    height: 38px;
+}
+
+.modal-search button[type="button"] {
+    margin: 0;
+    padding: 0;
+    
+    width: 38px;
+    height: 38px;
+    
+    font: inherit;
+    color: #a9a9a9;
+    
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+}
+
+.search button[type="button"]:hover,
+.search button[type="button"]:focus {
+    color: #000000;
+}
+
+.search button[type="button"]:active {
+    color: #81b3d2;
+}
+
+.search button[type="submit"] {
+    width: 100%;
+    padding: 16px 0;
+    
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    
+    background-color: #81b3d2;
+    border: none;
+    outline: none;
+}
+
+.search button[type="submit"]:hover,
+.search button[type="submit"]:focus {
+    background-color: #669ec0;
+}
+
+.search button[type="submit"]:active {
+    color: rgba(255, 255, 255, 0.3);
+    
+    background-color: #5496bd;
+}
+
+.modal-search .calendar {
+
+}
+
+.calendar span {
+    
+}
+
+.calendar:hover path,
+.calendar:focus {
+    fill: #000000;
+}
+
+.calendar:active path {
+    fill: #81b3d2;
 }
 
 /*Футер и карта*/
@@ -782,18 +794,12 @@ input[type="radio"].visually-hidden {
 } 
 
 /*Фильтр страниц отелей*/
-/*Заменить у чекбоксов outline*/
-/*Стилей у input при взаимодействии нет, добавить свои...
-+ добавить рамку */
-
-.modal-filter {
-    width: 100%;
-    
-    /*Временно для сетки*/
-    height: 217px;
-}
 
 .filter {
+    width: 100%;
+}
+
+.modal-filter {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -809,7 +815,7 @@ input[type="radio"].visually-hidden {
     background-size: 100%;
 }
 
-.filter .filter-wrapper {
+.modal-filter .filter-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -817,51 +823,194 @@ input[type="radio"].visually-hidden {
     width: 100%;
     margin: 0;
     padding: 0;
-    
-    /*Временно для сетки*/
-    height: 217px;
 }
 
-.filter .fieldset-wrapper {
+.modal-filter .fieldset-wrapper {
     width: 20%;
-    padding-top: 28px;
-    padding-bottom: 31px;
-    padding-left: 0;
-    
-    /*Временно для сетки*/
-    height: 217px;
+    margin: 0;
+    padding: 32px 6%;
 }
 
-.filter-wrapper div:nth-child(2) {
+.fieldset-wrapper:nth-of-type(2) {
     margin-right: auto;
-    padding-left: 15px;
 }
 
-.filter-wrapper div:nth-child(3) {
-    width: 300px;
-    padding-left: 10px;
+.fieldset-wrapper p {
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
 }
 
-.filter fieldset {
+.modal-filter fieldset {
     margin: 0;
     padding: 0;
     border: none;
 }
 
-.filter legend {
+.modal-filter legend {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    
     font-size: 16px;
     font-weight: bold;
 }
 
-.filter input[type="text"] {
-    font: inherit;
-    color: #ffffff;
+.filter-checkbox {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+
+    cursor: pointer;
+}
+
+.filter-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    width: 27px;
+    height: 23px;
     
-    background-color: transparent;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.filter-checkbox input[type="checkbox"]:hover + .checkbox-indicator,
+.filter-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    background-image: url(../img/checkbox-off-focus.svg);
+}
+
+.filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+    background-image: url(../img/checkbox-on.svg);
+}
+
+.filter-checkbox input[type="checkbox"]:focus:checked + .checkbox-indicator,
+.filter-checkbox input[type="checkbox"]:hover:checked + .checkbox-indicator {
+    background-image: url(../img/checkbox-on-focus.svg);
+}
+
+.filter-checkbox input[type="checkbox"]:disabled + .checkbox-indicator,
+.filter-checkbox input[type="checkbox"].disabled + .checkbox-indicator {
+    opacity: 0.3;
+}
+
+/*Сложный фильтр*/
+
+.filter-range {
+    width: 400px;
+    padding: 32px 0;
+    
+}
+
+.filter-range-title {
+    margin-bottom: 10px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.price-controls {
+    position: relative;
+
+    height: 36px;
+    margin-bottom: 20px;
+
+    font-size: 0;
+
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 2px;
+    height: 22px;
+
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: top;
+
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    padding-left: 65px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+
+    color: inherit;
+    font: inherit;
+
+    background: none;
     border: none;
 }
 
-.filter button[type="submit"] {
+.range-controls {
+    position: relative;
+
+    margin-bottom: 32px;
+}
+
+.range-controls .scale {
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+
+    width: 4px;
+    height: 4px;
+
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    background: #1c4f80;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+
+.modal-filter button[type="submit"] {
     width: 133px;
     height: 32px;
     
@@ -877,18 +1026,19 @@ input[type="radio"].visually-hidden {
     outline: none;
 }
 
-.filter button[type="submit"]:hover,
-.filter button[type="submit"]:focus {
+.modal-filter button[type="submit"]:hover,
+.modal-filter button[type="submit"]:focus {
     color: #000000;
     
     background-color: #ffffff;
 }
 
-.filter button[type="submit"]:active {
+.modal-filter button[type="submit"]:active {
     color: rgba(0, 0, 0, 0.9);
     
     background-color: rgba(255, 255, 255, 0.3);
 }
+
 
 /*Сортировка*/
 /*Добавить смену цвета свг иконок*/

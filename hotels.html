@@ -11,17 +11,15 @@
       
     <header class="main-header">
         <nav class="main-navigation">
-            <div class="align-container">
-                <a class="main-logo" href="index.html">
-                    <img class="sedona-main-logo" src="img/sedona-main-logo.png" width="138" height="70" alt="City Of Sedona">
-                </a>
-                <ul class="list-navigation">
-                    <li><a class="navigation-button" href="info.html">Информация</a></li>
-                    <li><a class="navigation-button" href="media.html">Фото и видео</a></li>
-                    <li><a class="navigation-button" href="map.html">Карта штата</a></li>
-                    <li><a class="navigation-button" href="hotels.html">Гостиницы</a></li>
-                </ul> 
-            </div>
+            <a class="main-logo" href="index.html">
+                <img class="sedona-main-logo" src="img/sedona-main-logo.png" width="138" height="70" alt="City Of Sedona">
+            </a>
+            <ul class="list-navigation">
+                <li><a class="navigation-button" href="info.html">Информация</a></li>
+                <li><a class="navigation-button" href="media.html">Фото и видео</a></li>
+                <li><a class="navigation-button" href="map.html">Карта штата</a></li>
+                <li><a class="navigation-button" href="hotels.html">Гостиницы</a></li>
+            </ul> 
         </nav>
     </header>
       
@@ -29,79 +27,78 @@
           
         <h1 class="visually-hidden">Выбор гостиницы</h1>
           
-        <section class="modal-filter">
+        <section class="filter">
             <h2 class="visually-hidden">Поиск гостиницы</h2>
-            <form class="filter" method="post" action="https://echo.htmlacademy.ru">
-                <div class="align-container">
-                    <div class="filter-wrapper">
-                        <div class="fieldset-wrapper">
-                            <fieldset>
-                                <legend>Инфраструктура:</legend>
-                                <p>
-                                    <label>
-                                        <input type="checkbox" name="pool" checked>
+            <form class="modal-filter" method="post" action="https://echo.htmlacademy.ru">
+                <div class="filter-wrapper">
+                    <div class="fieldset-wrapper">
+                        <fieldset>
+                            <legend>Инфраструктура:</legend>
+                            <p>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="pool" class="visually-hidden" checked disabled>
+                                    <span class="checkbox-indicator"></span>
                                         Бассейн
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox" name="parking">
+                                </label>
+                            </p>
+                            <p>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="parking" class="visually-hidden">
+                                    <span class="checkbox-indicator"></span>
                                         Парковка
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox" name="wi-fi">
+                                </label>
+                            </p>
+                            <p>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="wi-fi" class="visually-hidden">
+                                    <span class="checkbox-indicator"></span>
                                         Wi-fi
-                                    </label>
-                                </p>
-                            </fieldset>
-                        </div>
-                        <div class="fieldset-wrapper">
-                            <fieldset>
-                                <legend>Тип жилья:</legend>
-                                <p>
-                                    <label>
-                                        <input type="checkbox" name="hotel" checked>
+                                </label>
+                            </p>
+                        </fieldset>
+                    </div>
+                    <div class="fieldset-wrapper">
+                        <fieldset>
+                            <legend>Тип жилья:</legend>
+                            <p>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="hotel" class="visually-hidden" checked>
+                                    <span class="checkbox-indicator"></span>
                                         Гостиница
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox" name="motel" checked>
+                                </label>
+                            </p>
+                            <p>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="motel" class="visually-hidden" checked>
+                                    <span class="checkbox-indicator"></span>
                                         Мотель
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox" name="appartaments" checked>
+                                </label>
+                            </p>
+                            <p>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="appartaments" class="visually-hidden" checked>
+                                    <span class="checkbox-indicator"></span>
                                         Аппартаменты
-                                    </label>
-                                </p>
-                            </fieldset>
+                                </label>
+                            </p>
+                        </fieldset>
+                    </div>
+                    <div class="filter-range">
+                        <div class="filter-range-title">Стоимость в сутки (р):</div>
+                        <div class="price-controls">
+                            <label class="min-price">От <input type="text" name="min-price" value="0">
+                            </label>
+                            <label class="max-price">До <input type="text" name="max-price" value="3000">
+                            </label>
                         </div>
-                        <div class="fieldset-wrapper">
-                            <fieldset>
-                                <legend>Стоимость в сутки (Р):</legend>
-                                <div class="price">
-                                    <p>
-                                        <label for="price-from">От</label>
-                                        <input type="text" name="from" id="price-from" value="0">
-                                    </p>
-                                    <p>
-                                        <label for="price-to">До</label>
-                                        <input type="text" name="to" id="price-to" value="3000">
-                                    </p>
-                                <div class="price-slider" tabindex="0">
-                                    <span class="slider-icon visually-hidden">Минимальная стоимость</span>
-                                </div>
-                                <div class="price-slider" tabindex="0">
-                                    <span class="slider-icon visually-hidden">Максимальная стоимость</span>
-                                </div>
-                                </div>
-                            </fieldset>
-                            <button type="submit">Показать</button>
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="range-toggle range-toggle-min" tabindex="0"></div>
+                            <div class="range-toggle range-toggle-max" tabindex="0"></div>
                         </div>
+                        <button type="submit">Показать</button>
                     </div>
                 </div>
             </form>
