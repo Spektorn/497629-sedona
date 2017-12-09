@@ -204,7 +204,6 @@ input[type="radio"].visually-hidden {
 
 .intro-text-container {
     width: 100%;
-    height: 218px;
 }
 
 .intro-text-container p {
@@ -452,14 +451,15 @@ input[type="radio"].visually-hidden {
 
 /*Подбор отеля и форма*/
 
-.choice-wrapper {
+.choicenmodal-wrapper {
     position: relative;
+    
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
 }
 
-.choice-wrapper .choice {
+.choice {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -467,25 +467,31 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
 }
 
-.choice .choice-container {
+.choice-container {
     text-align: center;
 }
 
-.choice .choice-text-container {
+.choice-text-container {
     width: 100%;
-    padding-top: 55px;
-    padding-bottom: 50px;
+}
+
+.choice-text-container p {
+    margin: 0;
+    padding: 0;
 }
 
 .choice .paragraph {
     width: 450px;
     margin: 0 auto;
-    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 46px;
 }
 
-.interest {
+.choice .interest {
+    margin-bottom: 24px;
+        
     font-size: 30px;
-    line-height: 35px;
+    line-height: 36px;
     font-weight: bold;
     color: #000000;
 }
@@ -521,9 +527,9 @@ input[type="radio"].visually-hidden {
 
 /*Форма подбора отеля*/
 
-.choice-wrapper .search {
+.search {
     position: absolute;
-    top: 350px;
+    top: 294px;
     left: 50%;
     z-index: 1;
     
@@ -535,6 +541,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-search {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     
@@ -558,6 +565,8 @@ input[type="radio"].visually-hidden {
 
 .modal-search input[type="date"],
 .modal-search input[type="number"] {
+    box-sizing: inherit;
+    
     margin: 0;
     
     font: inherit;
@@ -596,9 +605,6 @@ input[type="radio"].visually-hidden {
 .modal-search button[type="button"] {
     margin: 0;
     padding: 0;
-    
-    width: 38px;
-    height: 38px;
     
     font: inherit;
     color: #a9a9a9;
@@ -643,14 +649,6 @@ input[type="radio"].visually-hidden {
     background-color: #5496bd;
 }
 
-.modal-search .calendar {
-
-}
-
-.calendar span {
-    
-}
-
 .calendar:hover path,
 .calendar:focus {
     fill: #000000;
@@ -662,29 +660,25 @@ input[type="radio"].visually-hidden {
 
 /*Футер и карта*/
 
-.main-page-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-}
-
 .mapnfooter-wrapper {
     position: relative;
     overflow: hidden;
-
+    
+    max-width: 1200px;
     min-height: 595px;
+    margin: 0 auto;
+    padding: 0;
     
     background-color: #e0e7ce;
 }
 
 .map-container {
-    margin-top: -155px;
-    margin-left: -259px;
+    margin-top: -120px;
+    margin-left: -210px;
 }
 
 .main-footer {
     max-width: 1200px;
-
     margin: 0 auto;
     
     background-color: rgba(255, 255, 255, 0.9);
@@ -699,24 +693,23 @@ input[type="radio"].visually-hidden {
     margin: 0;
 }
 
-.main-footer .footer-container {
+.footer-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     
     width: 100%;
-/*    margin: 37px 0;*/
 }
 
-.footer-container .footer-wrapper {
+.footer-item-wrapper {
     flex-basis: 33%;
     
     margin: 0;
     padding: 0;
 }
 
-.main-footer .footer-tag-container {
+.footer-tag-container {
     width: 136px;
     margin: 0 auto;
     padding: 48px 0;
@@ -731,7 +724,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-.main-footer .footer-copyright-container {
+.footer-copyright-container {
     position: relative;
     
     width: 200px;
@@ -756,7 +749,7 @@ input[type="radio"].visually-hidden {
     vertical-align: middle;
 }
 
-.main-footer .footer-social-container {
+.footer-social-container {
     width: 150px;
     margin: 0 auto;
     padding: 37px 0;
