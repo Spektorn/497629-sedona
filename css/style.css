@@ -1094,19 +1094,21 @@ input[type="radio"].visually-hidden {
 
 
 /*Сортировка*/
-/*Добавить смену цвета свг иконок*/
 
 .results {
     display: flex;
     flex-direction: column;
+    
     margin: 0;
     padding: 0;
+    
+    background-color: #ffffff;
 }
 
 .results .sorting {
     min-height: 86px;
     margin: 0;
-    padding: 30px 0;
+    padding: 30px 6%;
     
     font: inherit;
     font-size: 12px;
@@ -1116,7 +1118,7 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
 }
 
-.sorting .align-container {
+.sorting .sorting-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1134,7 +1136,7 @@ input[type="radio"].visually-hidden {
     color: #000000;
 }
 
-.sorting .sorting-settings {
+.sorting-settings {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1146,7 +1148,7 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
-.sorting-settings .text-selectors {
+.text-selectors {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1158,7 +1160,7 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
-.sorting-settings .arrow-selectors {
+.arrow-selectors {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1205,12 +1207,10 @@ input[type="radio"].visually-hidden {
 
 /*Список отелей*/
 
-.results .results-list {
+.results-container {
     flex-basis: 455px;
     
     line-height: 21px;
-    
-    background-color: #ffffff;
 }
 
 .hotels-list {
@@ -1223,39 +1223,16 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
-.hotels-list .hotel-position {
+.hotel-position {
     flex-basis: 152px;
+    
+    padding: 0 6%;
+    
     border-bottom: 1px solid #e5e5e5;
 }
 
-.hotels-list .hotel-position:first-child {
+.hotels-list .hotel-position:first-of-type {
     border-top: 1px solid #e5e5e5;
-}
-
-.hotel-position .align-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.hotel-position .hotel-preview {
-    margin-right: 30px;
-    padding-top: 31px;
-    padding-bottom: 31px;
-}
-
-.hotel-position img {
-    width: 135px;
-    height: 90px;
-}
-
-.hotel-position .hotel-main-info {
-    margin: 0;
-    padding-top: 25px;
-}
-
-.hotel-position .hotel-main-mark {
-    margin-left: auto;
-    padding-top: 30px;
 }
 
 .hotel-position p {
@@ -1264,13 +1241,52 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
+.position-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.hotel-preview {
+    margin-right: 30px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+}
+
+.hotel-main-info {
+    min-width: 260px;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 31px;
+}
+
+.hotel-main-info span {
+    display: inline-block;
+}
+
+.hotel-type {
+    width: 110px;
+    margin-right: 2px;
+}
+
+.hotel-price {
+    width: 150px;
+}
+
+.hotel-main-mark {
+    min-width: 115px;
+    margin-left: auto;
+    padding-top: 30px;
+    padding-bottom: 31px;
+}
+
 .hotel-rank {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     
-    width: 115px;
+    padding: 0;
+    margin: 0;
     margin-bottom: 48px;
     
     list-style: none;
@@ -1281,8 +1297,7 @@ input[type="radio"].visually-hidden {
     height: 17px;
     margin: 0;
     margin-left: 6px;
-    padding: 0;
-    
+    padding: 0; 
 }
 
 .hotel-rank span {
@@ -1315,6 +1330,8 @@ input[type="radio"].visually-hidden {
     
     width: 18px;
     height: 17px;
+    
+    background-color: transparent;
 }
 
 .hotel-rating {
@@ -1329,6 +1346,8 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
 }
+
+/*Интерактивные элементы*/
 
 .hotel-name {
     font-size: 21px;
@@ -1348,8 +1367,8 @@ input[type="radio"].visually-hidden {
 
 .hotels-list .button {
     display: inline-block;
-    padding: 3px 16px;
-    margin-top: 10px;
+    padding: 4px 16px;
+    margin-top: 8px;
     margin-right: 2px;
     
     font-weight: bold;
