@@ -55,6 +55,18 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header,
+.container,
+.inner-page-footer,
+.mapnfooter-wrapper {
+    box-shadow: 0 0 30px 0 #acacac;
+}
+
 /*Главное меню*/
 
 .main-header {
@@ -541,7 +553,6 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-search {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     
@@ -565,8 +576,6 @@ input[type="radio"].visually-hidden {
 
 .modal-search input[type="date"],
 .modal-search input[type="number"] {
-    box-sizing: inherit;
-    
     margin: 0;
     
     font: inherit;
@@ -574,6 +583,21 @@ input[type="radio"].visually-hidden {
     background-color: #f2f2f2;
     border: 2px solid transparent;
     outline: none;
+}
+
+.modal-search input[type="date"] {
+    width: 345px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 13px;
+    padding-right: 38px;
+}
+
+.modal-search input[type="number"] {
+    width: 38px;
+    height: 38px;
+    padding: 6px 4px;
+    margin: 0;
 }
 
 .modal-search input[type="date"]:hover,
@@ -587,24 +611,12 @@ input[type="radio"].visually-hidden {
     border: 2px solid #e5e5e5;
 }
 
-.modal-search input[type="date"] {
-    width: 345px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 13px;
-    padding-right: 39px;
-}
-
-.modal-search input[type="number"] {
-    padding: 6px 5px;
-    
-    width: 38px;
-    height: 38px;
-}
-
 .modal-search button[type="button"] {
     margin: 0;
     padding: 0;
+    
+    width: 38px;
+    height: 38px;
     
     font: inherit;
     color: #a9a9a9;
@@ -614,13 +626,24 @@ input[type="radio"].visually-hidden {
     outline: none;
 }
 
-.search button[type="button"]:hover,
-.search button[type="button"]:focus {
-    color: #000000;
+.calendar {
+    position: absolute;
+    top: 1px;
+    right: 0;
 }
 
-.search button[type="button"]:active {
-    color: #81b3d2;
+.calendar div {
+    margin: 0;
+    padding: 8px 9px;
+}
+
+.calendar:hover path,
+.calendar:focus path {
+    fill: #000000;
+}
+
+.calendar:active path {
+    fill: #81b3d2;
 }
 
 .search button[type="submit"] {
@@ -647,15 +670,6 @@ input[type="radio"].visually-hidden {
     color: rgba(255, 255, 255, 0.3);
     
     background-color: #5496bd;
-}
-
-.calendar:hover path,
-.calendar:focus {
-    fill: #000000;
-}
-
-.calendar:active path {
-    fill: #81b3d2;
 }
 
 /*Футер и карта*/
@@ -850,6 +864,7 @@ input[type="radio"].visually-hidden {
 
 .filter {
     width: 100%;
+    height: 218px;
 }
 
 .modal-filter {
@@ -953,18 +968,16 @@ input[type="radio"].visually-hidden {
 
 /*Сложный фильтр*/
 
-.filter-range {
-    width: 400px;
-    padding: 32px 0;
-    
+.range-wrapper {
+    width: 33.33%;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 6%;
+    padding-bottom: 23px;
 }
 
-.filter-range-title {
+.range-wrapper legend {
     margin-bottom: 10px;
-
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 21px;
 }
 
 .price-controls {
@@ -994,17 +1007,22 @@ input[type="radio"].visually-hidden {
 
 .price-controls label {
     display: inline-block;
+    width: 155px;
+    padding: 5px 0;
 
     font-size: 14px;
     line-height: 21px;
-    vertical-align: top;
+    vertical-align: middle;
 
     cursor: pointer;
 }
 
-.price-controls .min-price,
+.price-controls .min-price {
+    padding-left: 62px;
+}
+
 .price-controls .max-price {
-    padding-left: 65px;
+    padding-left: 50px;
 }
 
 .price-controls input {
@@ -1016,6 +1034,12 @@ input[type="radio"].visually-hidden {
 
     background: none;
     border: none;
+    outline: none;
+}
+
+.price-controls input:hover,
+.price-controls input:focus {
+    color: #81b3d2;
 }
 
 .range-controls {
@@ -1041,17 +1065,19 @@ input[type="radio"].visually-hidden {
     position: absolute;
     top: -9px;
 
-    width: 4px;
-    height: 4px;
+    width: 20px;
+    height: 20px;
 
     background: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
+    outline: none;
 }
 
-.range-toggle:hover {
+.range-toggle:hover,
+.range-toggle:focus {
     background: #1c4f80;
 }
 
@@ -1064,8 +1090,11 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-filter button[type="submit"] {
+    display: block;
+    
     width: 133px;
     height: 32px;
+    margin: 0 auto;
     
     font: inherit;
     font-size: 14px;
@@ -1077,6 +1106,7 @@ input[type="radio"].visually-hidden {
     border: 2px solid #ffffff;
     border-radius: 2px;
     outline: none;
+    cursor: pointer;
 }
 
 .modal-filter button[type="submit"]:hover,
@@ -1091,7 +1121,6 @@ input[type="radio"].visually-hidden {
     
     background-color: rgba(255, 255, 255, 0.3);
 }
-
 
 /*Сортировка*/
 
