@@ -248,37 +248,36 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
+.features-list li {
+    min-height: 256px;
+}
+
 .features-list h3 {
+    margin: 0;
+    padding: 0;
+
     font-size: 21px;
     font-weight: bold;
     color: #000000;
 }
 
-.features-list li {
-    min-height: 256px;
+.usual-features-list {
+    display: flex;
+    flex-direction: row;
+    
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
 }
 
 .feature-item {
     margin: 0;
+    padding: 0;
     
     width: 33.33%;
     
     text-align: center;
-}
-
-.feature-container {
-    width: 250px;
-    margin: auto;
-    margin-top: 45px;
-    margin-bottom: 55px;
-    
-    text-align: center;
-    vertical-align: middle;
-}
-
-.feature-container .feature-description {
-    margin: 0;
-    padding: 0;
 }
 
 .special {
@@ -320,6 +319,74 @@ input[type="radio"].visually-hidden {
     left: 0;
 }
 
+.feature-container {
+    width: 285px;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 55px;
+    
+    text-align: center;
+    vertical-align: middle;
+}
+
+.special-2 .feature-container {
+    width: 305px;
+}
+
+.usual-item:nth-of-type(2) .feature-container {
+    width: 280px;
+}
+
+.feature-title {
+    width: 160px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.feature-number {
+    position: relative;
+    
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+}
+
+.feature-number::before,
+.feature-number::after {
+    content: "";
+    
+    position: absolute;
+    top: 50%;
+    
+    width: 9px;
+    height: 2px;
+    margin-top: -1px;
+    
+    background-color: #a8a8a8;
+}
+
+.special .feature-number::before,
+.special .feature-number::after {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-number::before {
+    left: 50%;
+    
+    margin-left: -25px;
+}
+
+.feature-number::after {
+    right: 50%;
+    
+    margin-right: -25px;
+}
+
+.feature-description {
+    margin: 0;
+    padding: 0;
+}
+
 .towns-advantages {
     color: #000000;
     
@@ -340,6 +407,10 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
+.towns-advantages-list li {
+    min-height: 330px;
+}
+
 .towns-advantages-list .feature-container {
     position: relative;
     
@@ -354,9 +425,9 @@ input[type="radio"].visually-hidden {
     top: 0;
     left: 50%;
     
-    margin-left: -37px;
     width: 75px;
     height: 72px;
+    margin-left: -37px;
         
     background-size: 75px 72px;
 }
@@ -374,20 +445,9 @@ input[type="radio"].visually-hidden {
 }
 
 .advantage-item {
-    margin: 0;
-    padding: 0;
-    
     width: 33.33%;
-}
-
-.usual-features-list {
-    display: flex;
-    flex-direction: row;
-    
     margin: 0;
     padding: 0;
-    
-    list-style: none;
 }
 
 /*Подбор отеля и форма*/
