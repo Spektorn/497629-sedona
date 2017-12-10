@@ -24,6 +24,7 @@ body {
     text-transform: uppercase;
     
     background-color: #f2f2f2;
+    box-shadow: 0 0 30px 0 #acacac;
 }
 
 a {
@@ -53,18 +54,6 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.container {
-    margin: 0;
-    padding: 0;
-}
-
-.main-header,
-.container,
-.inner-page-footer,
-.mapnfooter-wrapper {
-    box-shadow: 0 0 30px 0 #acacac;
 }
 
 /*Главное меню*/
@@ -174,7 +163,7 @@ input[type="radio"].visually-hidden {
     background-color: #858c92;
     background-image: 
         url("../img/shadow.png"),  
-        url("../img/background-photo.jpg");
+        url("../img/bg-photo.jpg");
     background-size: 
         100% 57px,
         100%;
@@ -444,15 +433,15 @@ input[type="radio"].visually-hidden {
 }
 
 .feature-container-1::before {
-    background-image: url(../img/icon-1.svg);
+    background-image: url(../img/icon-shelter.svg);
 }
 
 .feature-container-2::before {
-    background-image: url(../img/icon-2.svg);
+    background-image: url(../img/icon-food.svg);
 }
 
 .feature-container-3::before {
-    background-image: url(../img/icon-3.svg);
+    background-image: url(../img/icon-present.svg);
 }
 
 .advantage-item {
@@ -514,6 +503,7 @@ input[type="radio"].visually-hidden {
     width: 568px;
     height: 86px;
     
+    font: inherit; 
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
@@ -523,6 +513,7 @@ input[type="radio"].visually-hidden {
     
     background-color: #766357;
     border: none;
+    border-radius: 0;
     outline: none;
 }
 
@@ -568,6 +559,23 @@ input[type="radio"].visually-hidden {
     
     margin: 0;
     margin-bottom: 30px;
+}
+
+.number-reg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin-bottom: 54px;
+}
+
+.number-reg-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    width: 114px;
 }
 
 .modal-search label {
@@ -619,6 +627,7 @@ input[type="radio"].visually-hidden {
     height: 38px;
     
     font: inherit;
+    font-size: 20px;
     color: #a9a9a9;
     
     background-color: #f2f2f2;
@@ -626,13 +635,24 @@ input[type="radio"].visually-hidden {
     outline: none;
 }
 
+.modal-search button[type="button"]:hover,
+.modal-search button[type="button"]:focus {
+    color: #000000;
+}
+
+.modal-search button[type="button"]:active {
+    color: #81b3d2;
+}
+
 .calendar {
     position: absolute;
-    top: 1px;
+    top: 0;
     right: 0;
 }
 
-.calendar div {
+.calendar span {
+    display: block;
+    
     margin: 0;
     padding: 8px 9px;
 }
@@ -650,6 +670,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
     padding: 16px 0;
     
+    font: inherit; 
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
@@ -824,21 +845,23 @@ input[type="radio"].visually-hidden {
     margin-left: -11px;
     margin-top: -11px;
     
-    background-size: 22px 22px;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1;
 }
 
 .social-list .social-tw::before {
+    background-size: 17px 15px;
     background-image: url(../img/t-icon.svg);
 }
 
 .social-list .social-fb::before {
+    background-size: 12px 22px;
     background-image: url(../img/fb-icon.svg);
 }
 
 .social-list .social-yt::before {
+    background-size: 20px 16px;
     background-image: url(../img/youtube-icon.svg);
 }
 
@@ -877,9 +900,9 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     
     background-color: #657380;
-    background-image: url(../img/filter-background.jpg);
+    background-image: url(../img/filter-bg.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center -60px;
     background-size: 100%;
 }
 
@@ -942,23 +965,13 @@ input[type="radio"].visually-hidden {
     width: 27px;
     height: 23px;
     
-    background-image: url(../img/checkbox-off.svg);
+    background-image: url(../img/checkbox-nonch.svg);
     background-repeat: no-repeat;
     background-position: left;
 }
 
-.filter-checkbox input[type="checkbox"]:hover + .checkbox-indicator,
-.filter-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
-    background-image: url(../img/checkbox-off-focus.svg);
-}
-
 .filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
-    background-image: url(../img/checkbox-on.svg);
-}
-
-.filter-checkbox input[type="checkbox"]:focus:checked + .checkbox-indicator,
-.filter-checkbox input[type="checkbox"]:hover:checked + .checkbox-indicator {
-    background-image: url(../img/checkbox-on-focus.svg);
+    background-image: url(../img/checkbox-ch.svg);
 }
 
 .filter-checkbox input[type="checkbox"]:disabled + .checkbox-indicator,
@@ -1035,11 +1048,6 @@ input[type="radio"].visually-hidden {
     background: none;
     border: none;
     outline: none;
-}
-
-.price-controls input:hover,
-.price-controls input:focus {
-    color: #81b3d2;
 }
 
 .range-controls {
@@ -1214,24 +1222,24 @@ input[type="radio"].visually-hidden {
     fill: #81b3d2;
 }
 
-.sorting-settings a {
+.text-selectors a {
     color: rgba(0, 0, 0, 0.3);
-    text-decoration: underline dotted #81b3d2;
+    border-bottom: 1px dotted #81b3d2;
 }
 
-.sorting-settings a:hover,
-.sorting-settings a:focus {
+.text-selectors a:hover,
+.text-selectors a:focus {
     color: #81b3d2;
 }
 
-.sorting-settings a:active {
+.text-selectors a:active {
     color: #000000;
-    text-decoration: none;
+    border-bottom: none;
 }
 
 .active-sort a {
     color: #81b3d2;
-    text-decoration: none;
+    border-bottom: none;
 }
 
 /*Список отелей*/
@@ -1345,7 +1353,7 @@ input[type="radio"].visually-hidden {
     width: 18px;
     height: 17px;
     
-    background-image: url(../img/star.svg);
+    background-image: url(../img/star-icon.svg);
     background-size: 18px 17px;
     background-position: center;
     background-repeat: no-repeat;
