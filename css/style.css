@@ -962,7 +962,7 @@ input[type="radio"].visually-hidden {
     top: -2px;
     left: 0;
 
-    width: 27px;
+    width: 23px;
     height: 23px;
     
     background-image: url(../img/checkbox-nonch.svg);
@@ -970,7 +970,15 @@ input[type="radio"].visually-hidden {
     background-position: left;
 }
 
+.filter-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+    width: 27px;
+    
     background-image: url(../img/checkbox-ch.svg);
 }
 
@@ -1047,7 +1055,6 @@ input[type="radio"].visually-hidden {
 
     background: none;
     border: none;
-    outline: none;
 }
 
 .range-controls {
