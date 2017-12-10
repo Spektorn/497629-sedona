@@ -201,20 +201,23 @@ input[type="radio"].visually-hidden {
 
 .intro-wrapper {
     margin: 0;
+    margin-bottom: 55px;
     padding: 0;
 }
 
-.intro-wrapper:first-of-type {
-    height: 86px;
-    margin-bottom: 54px;
-}
-
-.intro-wrapper:nth-of-type(2) {
-    height: 78px;
-    margin-bottom: 56px;
-}
-
 .intro-wrapper:last-of-type {
+    margin-bottom: 0;
+}
+
+.welcome-wrapper {
+    height: 86px;
+}
+
+.sedona-wrapper {
+    height: 78px;
+}
+
+.canyon-wrapper{
     height: 80px;
 }
 
@@ -1446,6 +1449,11 @@ input[type="radio"].visually-hidden {
     margin-right: 30px;
     padding-top: 31px;
     padding-bottom: 31px;
+}
+
+.hotel-preview img {
+    width: 135px;
+    height: 90px;
 }
 
 .hotel-main-info {
