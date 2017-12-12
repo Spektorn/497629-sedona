@@ -489,17 +489,9 @@ input[type="radio"].visually-hidden {
 
 /*Подбор отеля и форма*/
 
-.choicenmodal-wrapper {
-    position: relative;
-    
+.choice {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
-}
-
-.choice {
-    width: 100%;
-    margin: 0;
     padding: 0;
     
     background-color: #ffffff;
@@ -572,7 +564,7 @@ input[type="radio"].visually-hidden {
 
 .search {
     position: absolute;
-    top: 294px;
+    top: 0;
     left: 50%;
     z-index: 1;
     
@@ -581,10 +573,78 @@ input[type="radio"].visually-hidden {
     padding: 56px;
     
     background-color: #ffffff;
+    -webkit-animation: slide 0.6s;
+            animation: slide 0.6s;
+}
+
+@-webkit-keyframes slide {
+    0% {
+        -webkit-transform: translateY(-400px);
+                transform: translateY(-400px);
+    }
+    
+    20% {
+        -webkit-transform: translateY(-315px);
+                transform: translateY(-315px);
+    }
+    
+    40% {
+        -webkit-transform: translateY(-230px);
+                transform: translateY(-230px);
+    }
+    
+    60% {
+        -webkit-transform: translateY(-145px);
+                transform: translateY(-145px);
+    }
+    
+    80% {
+        -webkit-transform: translateY(-60px);
+                transform: translateY(-60px);
+    }
+    
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+@keyframes slide {
+    0% {
+        -webkit-transform: translateY(-400px);
+                transform: translateY(-400px);
+    }
+    
+    20% {
+        -webkit-transform: translateY(-315px);
+                transform: translateY(-315px);
+    }
+    
+    40% {
+        -webkit-transform: translateY(-230px);
+                transform: translateY(-230px);
+    }
+    
+    60% {
+        -webkit-transform: translateY(-145px);
+                transform: translateY(-145px);
+    }
+    
+    80% {
+        -webkit-transform: translateY(-60px);
+                transform: translateY(-60px);
+    }
+    
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
 }
 
 .search-hidden {
     display: none;
+    
+    animation: slide 0.6s reverse;
 }
 
 .modal-search {
@@ -785,6 +845,8 @@ input[type="radio"].visually-hidden {
 }
 
 .map-container {
+    overflow: hidden;
+    
     margin-top: -120px;
     margin-left: -210px;
 }
