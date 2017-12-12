@@ -32,8 +32,6 @@ body {
 
 a {
     text-decoration: none;
-    
-    outline: none;
 }
 
 img {
@@ -86,7 +84,7 @@ input[type="radio"].visually-hidden {
     
     width: 138px;
     height: 70px;
-    margin-left: -68px;
+    margin-left: -69px;
 }
 
 .list-navigation {
@@ -116,7 +114,7 @@ input[type="radio"].visually-hidden {
     padding-top: 15px;
     padding-bottom: 15px;
     
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .list-navigation li:nth-of-type(2) {
@@ -142,6 +140,8 @@ input[type="radio"].visually-hidden {
 .list-navigation a {
     font-weight: bold;
     color: #000000;
+    
+    outline: none;
 }
 
 .list-navigation a:hover,
@@ -194,14 +194,14 @@ input[type="radio"].visually-hidden {
         -ms-flex-align: center;
             align-items: center;
     
-    min-height: 510px;
-    padding-top: 78px;
+    min-height: 508px;
+    padding-top: 77px;
     padding-bottom: 80px;
 }
 
 .intro-wrapper {
     margin: 0;
-    margin-bottom: 55px;
+    margin-bottom: 52px;
     padding: 0;
 }
 
@@ -536,9 +536,12 @@ input[type="radio"].visually-hidden {
 
 /*Интерактивные элементы*/
 
-.choice button[type="button"] {
+.choice .search-btn {
+    display: block;
     width: 568px;
     height: 86px;
+    margin: 0 auto;
+    padding: 30px 0;
     
     font: inherit; 
     font-size: 21px;
@@ -554,12 +557,12 @@ input[type="radio"].visually-hidden {
     outline: none;
 }
 
-.choice button[type="button"]:hover,
-.choice button[type="button"]:focus {
+.choice .search-btn:hover,
+.choice .search-btn:focus {
     background-color: #604e43;
 }
 
-.choice button[type="button"]:active {
+.choice .search-btn:active {
     color: rgba(255, 255, 255, 0.3);
     
     background-color: #503e33;
@@ -784,6 +787,7 @@ input[type="radio"].visually-hidden {
 
 .main-footer {
     max-width: 1200px;
+    min-height: 120px;
     margin: 0 auto;
     
     background-color: rgba(255, 255, 255, 0.9);
@@ -827,7 +831,7 @@ input[type="radio"].visually-hidden {
 .footer-tag-container {
     width: 136px;
     margin: 0 auto;
-    padding: 48px 0;
+    padding: 47px 0;
     
     font-size: 21px;
     font-weight: bold;
@@ -844,7 +848,7 @@ input[type="radio"].visually-hidden {
     
     width: 200px;
     margin: 0 auto;
-    padding: 37px 0;
+    padding: 32px 0;
     
     vertical-align: middle;
 }
@@ -867,7 +871,7 @@ input[type="radio"].visually-hidden {
 .footer-social-container {
     width: 150px;
     margin: 0 auto;
-    padding: 37px 0;
+    padding: 31px 0;
 }
 
 .social-list {
@@ -909,6 +913,7 @@ input[type="radio"].visually-hidden {
     
     width: 46px;
     height: 48px;
+    margin: 5px 0;
 }
 
 /*Интерактивные элементы*/
@@ -920,6 +925,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
     
     background-color: #81b3d2;
+    outline: none;
 }
 
 .social-list a:hover,
@@ -971,6 +977,10 @@ input[type="radio"].visually-hidden {
     opacity: 0.3;
 }
 
+.htmlacademy-link {
+    outline: none;
+}
+
 .htmlacademy-link:hover path, 
 .htmlacademy-link:focus path {
     fill: #81b3d2;
@@ -984,7 +994,7 @@ input[type="radio"].visually-hidden {
 
 .filter {
     width: 100%;
-    height: 218px;
+    min-height: 217px;
 }
 
 .modal-filter {
@@ -1011,9 +1021,6 @@ input[type="radio"].visually-hidden {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     
     width: 100%;
     margin: 0;
@@ -1023,17 +1030,29 @@ input[type="radio"].visually-hidden {
 .modal-filter .fieldset-wrapper {
     width: 20%;
     margin: 0;
-    padding: 32px 6%;
+    margin-left: 15px;
+    padding: 0;
+    padding-left: 6%;
+    padding-top: 28px;
+    padding-bottom: 31px;
 }
 
-.fieldset-wrapper:nth-of-type(2) {
+.fieldset-wrapper:first-of-type {
+    margin-left: 0;
+}
+
+.fieldset-wrapper:nth-last-of-type(2) {
     margin-right: auto;
 }
 
 .fieldset-wrapper p {
     margin: 0;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     padding: 0;
+}
+
+.fieldset-wrapper p:last-of-type {
+    margin-bottom: 0;
 }
 
 .modal-filter fieldset {
@@ -1096,13 +1115,14 @@ input[type="radio"].visually-hidden {
 .range-wrapper {
     width: 33.33%;
     margin: 0;
-    padding-left: 10px;
     padding-right: 6%;
-    padding-bottom: 23px;
+    padding-top: 27px;
+    padding-bottom: 32px;
 }
 
 .range-wrapper legend {
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .price-controls {
@@ -1110,6 +1130,7 @@ input[type="radio"].visually-hidden {
 
     height: 36px;
     margin-bottom: 20px;
+    margin-left: 10px;
 
     font-size: 0;
 
@@ -1134,7 +1155,7 @@ input[type="radio"].visually-hidden {
 
 .price-controls label {
     display: inline-block;
-    width: 155px;
+    width: 156px;
     padding: 5px 0;
 
     font-size: 14px;
@@ -1145,11 +1166,11 @@ input[type="radio"].visually-hidden {
 }
 
 .price-controls .min-price {
-    padding-left: 62px;
+    padding-left: 65px;
 }
 
 .price-controls .max-price {
-    padding-left: 50px;
+    padding-left: 55px;
 }
 
 .price-controls input {
@@ -1167,6 +1188,7 @@ input[type="radio"].visually-hidden {
     position: relative;
 
     margin-bottom: 32px;
+    margin-left: 10px;
 }
 
 .range-controls .scale {
@@ -1200,7 +1222,9 @@ input[type="radio"].visually-hidden {
 
 .range-toggle:hover,
 .range-toggle:focus {
-    background: #1c4f80;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .range-toggle-min {
@@ -1214,8 +1238,8 @@ input[type="radio"].visually-hidden {
 .modal-filter button[type="submit"] {
     display: block;
     
-    width: 133px;
-    height: 32px;
+    width: 137px;
+    height: 36px;
     margin: 0 auto;
     
     font: inherit;
@@ -1272,6 +1296,7 @@ input[type="radio"].visually-hidden {
     color: #000000;
     
     background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .sorting .sorting-wrapper {
@@ -1358,6 +1383,10 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
+.arrow {
+    outline: none;
+}
+
 .arrow:hover path,
 .arrow:focus path {
     fill: #231f20;
@@ -1374,11 +1403,14 @@ input[type="radio"].visually-hidden {
 .text-selectors a {
     color: rgba(0, 0, 0, 0.3);
     border-bottom: 1px dotted #81b3d2;
+    
+    outline: none;
 }
 
 .text-selectors a:hover,
 .text-selectors a:focus {
     color: #81b3d2;
+    border-bottom: 1px dotted #81b3d2;
 }
 
 .text-selectors a:active {
@@ -1417,16 +1449,11 @@ input[type="radio"].visually-hidden {
 
 .hotel-position {
     position: relative;
-    -ms-flex-preferred-size: 152px;
-        flex-basis: 152px;
+    min-height: 151px;
     
     padding: 0 6%;
     
     border-bottom: 1px solid #e5e5e5;
-}
-
-.hotels-list .hotel-position:first-of-type {
-    border-top: 1px solid #e5e5e5;
 }
 
 .hotel-position p {
@@ -1443,12 +1470,17 @@ input[type="radio"].visually-hidden {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .hotel-preview {
+    height: 90px;
+    margin: 0;
     margin-right: 30px;
-    padding-top: 31px;
-    padding-bottom: 31px;
 }
 
 .hotel-preview img {
@@ -1457,10 +1489,10 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-main-info {
-    min-width: 260px;
+    width: 280px;
     margin: 0;
     padding-top: 25px;
-    padding-bottom: 31px;
+    padding-bottom: 30px;
 }
 
 .hotel-main-info span {
@@ -1479,10 +1511,11 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-main-mark {
-    min-width: 115px;
+    width: 120px;
     margin-left: auto;
-    padding-top: 30px;
-    padding-bottom: 31px;
+    padding: 30px 0;
+    
+    text-align: right;
 }
 
 .hotel-rank {
@@ -1504,6 +1537,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-bottom: 48px;
     
+    text-align: left;
     list-style: none;
 }
 
@@ -1552,7 +1586,7 @@ input[type="radio"].visually-hidden {
 .hotel-rating {
     display: inline-block;
     margin: 0;
-    padding: 3px 16px;
+    padding: 3px 15px;
     
     vertical-align: middle;
     
@@ -1571,6 +1605,8 @@ input[type="radio"].visually-hidden {
     line-height: 26px;
     font-weight: bold;
     color: #000000;
+    
+    outline: none;
 }
 
 .hotel-name:hover,
@@ -1584,14 +1620,17 @@ input[type="radio"].visually-hidden {
 
 .hotels-list .button {
     display: inline-block;
-    padding: 4px 16px;
+    height: 27px;
+    padding: 3px 16px;
     margin-top: 7px;
-    margin-right: 2px;
+    margin-right: 4px;
     
     vertical-align: middle;
     
     font-weight: bold;
     color: #ffffff;
+    
+    outline: none;
 }
 
 .hotels-list .info {
