@@ -140,8 +140,6 @@ input[type="radio"].visually-hidden {
 .list-navigation a {
     font-weight: bold;
     color: #000000;
-    
-    outline: none;
 }
 
 .list-navigation a:hover,
@@ -546,7 +544,6 @@ input[type="radio"].visually-hidden {
     background-color: #766357;
     border: none;
     border-radius: 0;
-    outline: none;
 }
 
 .choice .search-btn:hover,
@@ -573,34 +570,12 @@ input[type="radio"].visually-hidden {
     padding: 56px;
     
     background-color: #ffffff;
-    -webkit-animation: slide 0.6s;
-            animation: slide 0.6s;
 }
 
 @-webkit-keyframes slide {
     0% {
         -webkit-transform: translateY(-400px);
                 transform: translateY(-400px);
-    }
-    
-    20% {
-        -webkit-transform: translateY(-315px);
-                transform: translateY(-315px);
-    }
-    
-    40% {
-        -webkit-transform: translateY(-230px);
-                transform: translateY(-230px);
-    }
-    
-    60% {
-        -webkit-transform: translateY(-145px);
-                transform: translateY(-145px);
-    }
-    
-    80% {
-        -webkit-transform: translateY(-60px);
-                transform: translateY(-60px);
     }
     
     100% {
@@ -615,24 +590,28 @@ input[type="radio"].visually-hidden {
                 transform: translateY(-400px);
     }
     
-    20% {
-        -webkit-transform: translateY(-315px);
-                transform: translateY(-315px);
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes slide-rev {
+    0% {
+        -webkit-transform: translateY(400px);
+                transform: translateY(400px);
     }
     
-    40% {
-        -webkit-transform: translateY(-230px);
-                transform: translateY(-230px);
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
     }
-    
-    60% {
-        -webkit-transform: translateY(-145px);
-                transform: translateY(-145px);
-    }
-    
-    80% {
-        -webkit-transform: translateY(-60px);
-                transform: translateY(-60px);
+}
+
+@keyframes slide-rev {
+    0% {
+        -webkit-transform: translateY(400px);
+                transform: translateY(400px);
     }
     
     100% {
@@ -643,8 +622,17 @@ input[type="radio"].visually-hidden {
 
 .search-hidden {
     display: none;
-    
-    animation: slide 0.6s reverse;
+}
+
+.search-visible {
+    -webkit-animation: slide 0.6s;
+            animation: slide 0.6s;
+}
+
+.search-invisible {
+    top: -400px;
+    -webkit-animation: slide-rev 0.6s;
+            animation: slide-rev 0.6s;
 }
 
 .modal-search {
@@ -723,7 +711,6 @@ input[type="radio"].visually-hidden {
     
     background-color: #f2f2f2;
     border: 2px solid transparent;
-    outline: none;
 }
 
 .modal-search input[type="date"] {
@@ -768,7 +755,6 @@ input[type="radio"].visually-hidden {
     background-color: #f2f2f2;
     border: none;
     border-radius: 0;
-    outline: none;
 }
 
 .modal-search button[type="button"]:hover,
@@ -816,7 +802,6 @@ input[type="radio"].visually-hidden {
     background-color: #81b3d2;
     border: none;
     border-radius: 0;
-    outline: none;
 }
 
 .search button[type="submit"]:hover,
@@ -1000,7 +985,6 @@ input[type="radio"].visually-hidden {
     padding: 0;
     
     background-color: #81b3d2;
-    outline: none;
 }
 
 .social-list a:hover,
@@ -1050,10 +1034,6 @@ input[type="radio"].visually-hidden {
 
 .social-list a:active::before {
     opacity: 0.3;
-}
-
-.htmlacademy-link {
-    outline: none;
 }
 
 .htmlacademy-link:hover path, 
@@ -1292,7 +1272,6 @@ input[type="radio"].visually-hidden {
     -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
             box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
-    outline: none;
 }
 
 .range-toggle:hover,
@@ -1326,7 +1305,6 @@ input[type="radio"].visually-hidden {
     background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 2px;
-    outline: none;
     cursor: pointer;
 }
 
@@ -1458,10 +1436,6 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
-.arrow {
-    outline: none;
-}
-
 .arrow:hover path,
 .arrow:focus path {
     fill: #231f20;
@@ -1478,8 +1452,6 @@ input[type="radio"].visually-hidden {
 .text-selectors a {
     color: rgba(0, 0, 0, 0.3);
     border-bottom: 1px dotted #81b3d2;
-    
-    outline: none;
 }
 
 .text-selectors a:hover,
@@ -1680,8 +1652,6 @@ input[type="radio"].visually-hidden {
     line-height: 26px;
     font-weight: bold;
     color: #000000;
-    
-    outline: none;
 }
 
 .hotel-name:hover,
@@ -1704,8 +1674,6 @@ input[type="radio"].visually-hidden {
     
     font-weight: bold;
     color: #ffffff;
-    
-    outline: none;
 }
 
 .hotels-list .info {

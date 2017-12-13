@@ -1,11 +1,16 @@
 var btn = document.querySelector(".search-btn");
 var popup = document.querySelector(".search");
-var arrivaldate = popup.querySelector("[name=arrival-date]");
 
-popup.classList.toggle("search-hidden");
+popup.classList.add("search-hidden");
 
 btn.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.add("search-anim");
-    popup.classList.toggle("search-hidden");
-  });
+    if (popup.classList.contains("search-hidden")) {
+        popup.classList.remove("search-hidden");
+        popup.classList.add("search-visible");
+        }
+    else {
+        popup.classList.toggle("search-invisible");
+        popup.classList.toggle("search-visible");
+        }
+    });
